@@ -1,0 +1,64 @@
+[versions]
+agp= "8.1.3"
+kotlin = "1.9.0"
+kotlin-serialization = "1.8.0"
+
+androidx-core = "1.13.1"
+androidx-appcompat = "1.6.1"
+androidx-activity = "1.9.0"
+androidx-fragment = "1.7.0"
+androidx-lifecycle = "2.7.0"
+androidx-lifecycle-ext = "2.2.0"
+androidx-viewpager2 = "1.0.0"
+androidx-constraintlayout = "2.1.4"
+kotlinx-serialization = "1.5.1"
+retrofit2-kotlinx-serialization = "1.0.0"
+junit = "4.13.2"
+test-ext = "1.1.5"
+test-espresso-core = "3.5.1"
+material = "1.11.0"
+retrofit2 = "2.9.0"
+okhttp3 = "4.11.0"
+coroutines = "1.7.3"
+coil-kt = "2.6.0"
+coil-transformers = "1.0.6"
+
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+androidx-activity = { group = "androidx.activity", name = "activity-ktx", version.ref = "androidx-activity" }
+androidx-fragment = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "androidx-fragment" }
+androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
+test-ext = { group = "androidx.test.ext", name = "junit", version.ref = "test-ext" }
+test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "test-espresso-core" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
+kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+retrofit2-kotlinx-serialization = { group = "com.jakewharton.retrofit", name="retrofit2-kotlinx-serialization-converter", version.ref = "retrofit2-kotlinx-serialization" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit2" }
+bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref = "okhttp3" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp3" }
+okhttp-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3" }
+viewpager2 = { group = "androidx.viewpager2", name = "viewpager2", version.ref = "androidx-viewpager2" }
+coroutine = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+viewmodel = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "androidx-lifecycle-ext" }
+coil-kt = { group = "io.coil-kt", name = "coil", version.ref = "coil-kt" }
+coil-transformers = { group = "jp.wasabeef.transformers", name = "coil", version.ref = "coil-transformers" }
+
+[plugins]
+androidApplication = {id = "com.android.application", version.ref = "agp"}
+kotlinAndroid = {id = "org.jetbrains.kotlin.android", version.ref = "kotlin"}
+kotlinKapt = {id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin"}
+kotlinSerialization = {id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-serialization"}
+kotlinJvm = {id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin"}
+
+[bundles]
+androidx = ["androidx-core-ktx", "androidx-appcompat"]
+test = ["junit", "test-ext", "test-espresso-core"]
+material = ["material", "androidx-constraintlayout"]
+ktx = ["androidx-activity", "androidx-fragment", "androidx-lifecycle"]
+serialization = ["kotlinx-serialization", "retrofit2-kotlinx-serialization"]
+okhttps3 = ["okhttp", "okhttp-interceptor"]
+coil = ["coil-kt", "coil-transformers"]
