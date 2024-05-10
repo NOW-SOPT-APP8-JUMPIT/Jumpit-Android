@@ -7,14 +7,14 @@ plugins {
 
 android {
     namespace = "com.sopt.now.jumpit"
-    compileSdk = 34
+    compileSdk = libs.versions.targetSdk.get().toInt()
 
     defaultConfig {
         applicationId = "com.sopt.now.jumpit"
-        minSdk = 30
-        targetSdk = 34
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
-        versionName = "1.0"
+        versionName = libs.versions.configVersion.toString()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
