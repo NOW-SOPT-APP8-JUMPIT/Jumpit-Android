@@ -1,20 +1,20 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.0"
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.kotlinKapt)
+    alias(libs.plugins.kotlinSerialization)
 }
 
 android {
     namespace = "com.sopt.now.jumpit"
-    compileSdk = 34
+    compileSdk = libs.versions.targetSdk.get().toInt()
 
     defaultConfig {
         applicationId = "com.sopt.now.jumpit"
-        minSdk = 30
-        targetSdk = 34
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
-        versionName = "1.0"
+        versionName = libs.versions.configVersion.toString()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -45,47 +45,38 @@ android {
 dependencies {
 
     // AndroidX
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation(libs.bundles.androidx)
 
     // Test
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation(libs.bundles.test)
 
     // Material
-    implementation("com.google.android.material:material:1.11.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation(libs.bundles.material)
 
     // ktx
-    implementation("androidx.activity:activity-ktx:1.9.0")
-    implementation("androidx.fragment:fragment-ktx:1.7.0")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation(libs.bundles.ktx)
 
     // Retrofit2
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation(libs.retrofit2)
 
     // Serialization
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
-    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
+    implementation(libs.bundles.serialization)
 
     // BOM
-    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.11.0"))
+    implementation(platform(libs.bom))
 
     // Okhttp3
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+    implementation(libs.bundles.okhttps3)
 
     // ViewPager2
-    implementation("androidx.viewpager2:viewpager2:1.0.0")
+    implementation(libs.viewpager2)
 
     // Coroutine
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation(libs.coroutine)
 
     // ViewModel
-    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+    implementation(libs.viewmodel)
 
     // Coil
-    implementation("io.coil-kt:coil:2.6.0")
-    implementation("jp.wasabeef.transformers:coil:1.0.6")
+    implementation(libs.bundles.coil)
 }
