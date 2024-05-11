@@ -17,7 +17,7 @@ object NetworkModule {
         ignoreUnknownKeys = true
     }
 
-    private fun getLogOkHttpClient(): Interceptor {
+    private fun provideLogOkHttpClient(): Interceptor {
         val loggingInterceptor = HttpLoggingInterceptor { message ->
             Log.d("Retrofit2", "CONNECTION INFO -> $message")
         }
@@ -26,7 +26,7 @@ object NetworkModule {
     }
 
     private val okHttpClient = OkHttpClient.Builder()
-        .addInterceptor(getLogOkHttpClient())
+        .addInterceptor(provideLogOkHttpClient())
         .build()
 
     val retrofit: Retrofit = Retrofit.Builder()
