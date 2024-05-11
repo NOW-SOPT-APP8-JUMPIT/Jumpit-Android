@@ -5,4 +5,5 @@ import com.sopt.now.jumpit.databinding.ActivityMainBinding
 import com.sopt.now.jumpit.feature.base.BindingActivity
 
 class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {
+
 }
