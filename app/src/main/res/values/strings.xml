@@ -16,4 +16,6 @@
     <string name="tvResumeHelpOpenContent">이력서를 공개하시면 추후 이력서 열\n람서비스를 통한 면접 제안을 받으실\n수 있습니다.</string>
     <string name="tvResumeHelpPrivateTitle">이력서 비공개</string>
     <string name="tvResumeHelpPrivateContent">모든 정보가 비공개 됩니다.\n입사지원한 기업에서만 이력서를\n확인할 수 있습니다.</string>
+    <string name="tvAddResume">이력서 추가하기</string>
+    <string name="tvGetResume">사람인 이력서 가져오기</string>
 </resources>

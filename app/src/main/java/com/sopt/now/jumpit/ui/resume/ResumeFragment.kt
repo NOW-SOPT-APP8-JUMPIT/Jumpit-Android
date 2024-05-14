@@ -63,6 +63,16 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
     }
 
     private fun onResumeAddBtnClick() {
+        binding.btnResumeAdd.setOnClickListener {
+            showAddBottomSheetDialog()
+        }
+    }
 
+    private fun showAddBottomSheetDialog() {
+        val addBottomSheetDialog = AddBottomSheetDialogFragment()
+        addBottomSheetDialog.show(
+            requireActivity().supportFragmentManager,
+            addBottomSheetDialog.tag
+        )
     }
 }
