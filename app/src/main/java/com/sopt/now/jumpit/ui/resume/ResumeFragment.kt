@@ -5,16 +5,37 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.View
 import android.widget.PopupWindow
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.databinding.FragmentResumeBinding
 import com.sopt.now.jumpit.ui.base.BindingFragment
 
 class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_resume) {
+    private lateinit var resumeAdapter: ResumeAdapter
+    private lateinit var viewModel: ResumeViewModel
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         onResumeHelpBtnClick()
         onAttachmentHelpBtnClick()
         onResumeAddBtnClick()
+
+        viewModel = ViewModelProvider(this)[ResumeViewModel::class.java]
+
+        resumeAdapter = ResumeAdapter()
+        binding.rvMyResumeList.run {
+            adapter = resumeAdapter
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        }
+
+        if(viewModel.mockResumeList.isEmpty()) {
+            binding.clNoResumeListArea.visibility = View.VISIBLE
+            binding.clMyResumeListArea.visibility = View.INVISIBLE
+        } else {
+            binding.clNoResumeListArea.visibility = View.INVISIBLE
+            binding.clMyResumeListArea.visibility = View.VISIBLE
+        }
+        resumeAdapter.setResumeList(viewModel.mockResumeList)
     }
 
     private fun onResumeHelpBtnClick() {

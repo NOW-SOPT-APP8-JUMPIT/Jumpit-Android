@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginEnd="13dp"
     android:background="@drawable/white_rectangle_background"
     android:paddingHorizontal="17dp"
     android:paddingTop="24dp"
@@ -83,6 +84,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
+            android:id="@+id/btnEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -130,13 +132,14 @@
             style="@style/body2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/tvResumePrivate"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/tvResumePrivate" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
+            android:id="@+id/btnToggle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
