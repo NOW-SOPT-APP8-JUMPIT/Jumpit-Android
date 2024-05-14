@@ -46,6 +46,8 @@ dependencies {
 
     // AndroidX
     implementation(libs.bundles.androidx)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
 
     // Test
     testImplementation(libs.bundles.test)

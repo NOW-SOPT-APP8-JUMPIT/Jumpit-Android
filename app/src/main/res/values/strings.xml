@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Jumpit</string>
+    <string name="tvResumeTitle">이력서</string>
+    <string name="tvMyResumeTitle">나의 이력서</string>
+    <string name="tvNoResume">등록된 이력서가 없습니다.</string>
+    <string name="tvAttachmentTitle">첨부파일</string>
+    <string name="tvNoAttachment">첨부파일이 비어있습니다.</string>
+    <string name="tvAttachmentGuide">첨부파일 미리보기는 pdf만 가능합니다.</string>
+    <string name="tvResumePrivate">이력서 비공개</string>
+    <string name="tvBasicInfo">기본정보</string>
+    <string name="tvTechStack">기술스택</string>
+    <string name="tvEducation">학력</string>
 </resources>
