@@ -12,7 +12,7 @@
         style="@style/tag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="첨부파일 등록"
+        android:text="@string/tvAttachmentHelpTitle"
         android:textColor="@color/gray6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="경험을 보여줄 수 있는 포트폴리오나\n경력기술서 등을 첨부해보세요.\n(PDF를 권장합니다.)"
+        android:text="@string/tvAttachmentHelpContent"
         android:textColor="@color/gray5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvAttachmentHelpTitle" />

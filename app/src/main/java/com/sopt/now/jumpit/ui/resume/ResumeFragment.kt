@@ -14,6 +14,7 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
         super.onViewCreated(view, savedInstanceState)
         onResumeHelpBtnClick()
         onAttachmentHelpBtnClick()
+        onResumeAddBtnClick()
     }
 
     private fun onResumeHelpBtnClick() {
@@ -59,5 +60,9 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
             }
             binding.btnAttachmentHelp.setImageResource(R.drawable.icn_help_select)
         }
+    }
+
+    private fun onResumeAddBtnClick() {
+
     }
 }

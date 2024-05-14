@@ -8,10 +8,10 @@ import com.sopt.now.jumpit.ui.base.BindingActivity
 import com.sopt.now.jumpit.ui.resume.ResumeFragment
 
 class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        supportFragmentManager.beginTransaction()
-//            .replace(R.id.clMain, ResumeFragment())
-//            .commit()
-//    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.clMain, ResumeFragment())
+            .commit()
+    }
 }
