@@ -1,49 +1,50 @@
 package com.sopt.now.jumpit.ui.resume
 
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class ResumeViewModel : ViewModel() {
-    val mockResumeList = listOf<Resume>(
-        Resume(
-            basicInfo = false,
-            techStack = false,
-            education = false,
-            title = "이력서_240424",
-            date = "2024.04.24 등록",
-            state = false
-        ),
-        Resume(
-            basicInfo = true,
-            techStack = false,
-            education = true,
-            title = "이력서_240424",
-            date = "2024.04.24 등록",
-            state = false
-        ),
-        Resume(
-            basicInfo = true,
-            techStack = false,
-            education = false,
-            title = "이력서_240424",
-            date = "2024.04.24 등록",
-            state = false
-        ),
-        Resume(
-            basicInfo = true,
-            techStack = true,
-            education = true,
-            title = "이력서_240424",
-            date = "2024.04.24 등록",
-            state = false
-        ),
-    )
+    private val _mockResumeList = MutableLiveData<MutableList<Resume>>()
+    val mockResumeList: LiveData<MutableList<Resume>>
+        get() = _mockResumeList
 
-    fun showEditBottomDialogSheet(fragment: Fragment) {
-        val editBottomSheetDialog = EditBottomSheetDialogFragment()
-        editBottomSheetDialog.show(
-            fragment.childFragmentManager,
-            editBottomSheetDialog.tag
+    init {
+        // 초기 데이터 설정
+        _mockResumeList.value = mutableListOf(
+            Resume(
+                basicInfo = false,
+                techStack = false,
+                education = false,
+                title = "이력서_240424",
+                date = "2024.04.24 등록",
+                state = false
+            ),
+            Resume(
+                basicInfo = true,
+                techStack = false,
+                education = true,
+                title = "이력서_240424",
+                date = "2024.04.24 등록",
+                state = false
+            ),
+            Resume(
+                basicInfo = true,
+                techStack = false,
+                education = false,
+                title = "이력서_240424",
+                date = "2024.04.24 등록",
+                state = false
+            ),
+            Resume(
+                basicInfo = true,
+                techStack = true,
+                education = true,
+                title = "이력서_240424",
+                date = "2024.04.24 등록",
+                state = false
+            )
         )
     }
 }

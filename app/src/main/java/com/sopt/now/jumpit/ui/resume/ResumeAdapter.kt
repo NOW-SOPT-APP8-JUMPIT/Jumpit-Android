@@ -2,13 +2,24 @@ package com.sopt.now.jumpit.ui.resume
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sopt.now.jumpit.databinding.ItemResumeBinding
 
-class ResumeAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ResumeAdapter(fragmentManager : FragmentManager) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var resumeList: List<Resume> = emptyList()
+    private var mfragmentManager : FragmentManager
+    init {
+        mfragmentManager = fragmentManager
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return ResumeViewHolder(ItemResumeBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return ResumeViewHolder(
+            ItemResumeBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun getItemCount(): Int {
@@ -16,7 +27,7 @@ class ResumeAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as ResumeViewHolder).onBind(resumeList[position])
+        (holder as ResumeViewHolder).onBind(resumeList[position], mfragmentManager)
     }
 
     fun setResumeList(resumeList: List<Resume>) {

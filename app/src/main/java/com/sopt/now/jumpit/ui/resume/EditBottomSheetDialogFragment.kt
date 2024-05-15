@@ -32,7 +32,8 @@ class EditBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
     private fun onTextResumeDeleteClick() {
         binding.tvDeleteResume.setOnClickListener {
-            dismiss()
+            // TODO: 이력서 삭제
+
         }
     }
 }
