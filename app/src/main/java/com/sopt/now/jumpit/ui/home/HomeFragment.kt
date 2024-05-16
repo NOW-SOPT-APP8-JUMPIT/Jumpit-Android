@@ -1,4 +1,4 @@
-package com.sopt.now.jumpit.feature.home
+package com.sopt.now.jumpit.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

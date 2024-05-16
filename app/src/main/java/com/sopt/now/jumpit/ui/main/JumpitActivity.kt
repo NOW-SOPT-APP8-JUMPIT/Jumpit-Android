@@ -1,4 +1,4 @@
-package com.sopt.now.jumpit.feature.main
+package com.sopt.now.jumpit.ui.main
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -11,7 +11,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.data.model.BottomNaviItems
 import com.sopt.now.jumpit.databinding.ActivityJumpitBinding
-import com.sopt.now.jumpit.feature.base.BindingActivity
+import com.sopt.now.jumpit.ui.base.BindingActivity
 
 class JumpitActivity : BindingActivity<ActivityJumpitBinding>(R.layout.activity_jumpit){
     private lateinit var navController: NavController

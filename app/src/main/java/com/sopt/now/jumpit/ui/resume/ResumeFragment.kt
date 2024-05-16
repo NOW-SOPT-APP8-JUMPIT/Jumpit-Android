@@ -1,4 +1,4 @@
-package com.sopt.now.jumpit.feature.resume
+package com.sopt.now.jumpit.ui.resume
 
 import android.os.Bundle
 import android.view.LayoutInflater

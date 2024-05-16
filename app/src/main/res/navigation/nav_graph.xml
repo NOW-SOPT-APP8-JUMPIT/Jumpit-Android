@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/menu_home"
-        android:name="com.sopt.now.jumpit.feature.home.HomeFragment"
+        android:name="com.sopt.now.jumpit.ui.home.HomeFragment"
         android:label="홈"
         tools:layout="@layout/fragment_home">
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/menu_resume"
-        android:name="com.sopt.now.jumpit.feature.resume.ResumeFragment"
+        android:name="com.sopt.now.jumpit.ui.resume.ResumeFragment"
         android:label="이력서"
         tools:layout="@layout/fragment_resume">
         <action
