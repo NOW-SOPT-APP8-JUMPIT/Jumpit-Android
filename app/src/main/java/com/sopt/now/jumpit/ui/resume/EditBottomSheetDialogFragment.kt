@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.sopt.now.jumpit.databinding.FragmentEditBottomSheetDialogBinding
 
-class EditBottomSheetDialogFragment : BottomSheetDialogFragment() {
+class EditBottomSheetDialogFragment() : BottomSheetDialogFragment() {
     private lateinit var binding: FragmentEditBottomSheetDialogBinding
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,8 +32,7 @@ class EditBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
     private fun onTextResumeDeleteClick() {
         binding.tvDeleteResume.setOnClickListener {
-            // TODO: 이력서 삭제
-
+            // TODO: 이력서 삭제 기능 구현
         }
     }
 }

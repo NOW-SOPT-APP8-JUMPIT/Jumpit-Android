@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.sopt.now.jumpit.databinding.FragmentAddBottomSheetDialogBinding
 
-class AddBottomSheetDialogFragment : BottomSheetDialogFragment() {
+class AddBottomSheetDialogFragment() : BottomSheetDialogFragment() {
     private lateinit var binding: FragmentAddBottomSheetDialogBinding
     private lateinit var viewModel: ResumeViewModel
     override fun onCreateView(
@@ -35,7 +35,7 @@ class AddBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
     private fun onTextResumeAddClick() {
         binding.tvAddResume.setOnClickListener {
-            viewModel.mockResumeList.value?.add(
+            viewModel.addResume(
                 Resume(
                     basicInfo = true,
                     techStack = true,

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.databinding.FragmentResumeBinding
 import com.sopt.now.jumpit.ui.base.BindingFragment
+import kotlinx.coroutines.CoroutineScope
 
 class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_resume) {
     private lateinit var resumeAdapter: ResumeAdapter
@@ -30,17 +31,16 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         }
 
-        if(viewModel.mockResumeList.value.isNullOrEmpty()) {
-            binding.clNoResumeListArea.visibility = View.VISIBLE
-            binding.clMyResumeListArea.visibility = View.INVISIBLE
-        } else {
-            binding.clNoResumeListArea.visibility = View.INVISIBLE
-            binding.clMyResumeListArea.visibility = View.VISIBLE
-        }
-
-        Log.e("ResumeFragment", "onViewCreated: ${viewModel.mockResumeList.value}")
-        viewModel.mockResumeList.observe(viewLifecycleOwner) {
-            resumeAdapter.setResumeList(it)
+        viewModel.mockResumeList.observe(viewLifecycleOwner) {resumeList ->
+            if (resumeList.isEmpty()) {
+                binding.clNoResumeListArea.visibility = View.VISIBLE
+                binding.clMyResumeListArea.visibility = View.INVISIBLE
+            } else {
+                binding.clNoResumeListArea.visibility = View.INVISIBLE
+                binding.clMyResumeListArea.visibility = View.VISIBLE
+            }
+            binding.tvMyResumeCount.text = resumeList.size.toString()
+            resumeAdapter.setResumeList(resumeList)
         }
     }
 

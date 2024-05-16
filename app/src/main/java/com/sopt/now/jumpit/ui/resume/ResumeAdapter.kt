@@ -6,12 +6,15 @@ import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sopt.now.jumpit.databinding.ItemResumeBinding
 
-class ResumeAdapter(fragmentManager : FragmentManager) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private var resumeList: List<Resume> = emptyList()
-    private var mfragmentManager : FragmentManager
+class ResumeAdapter(fragmentManager: FragmentManager) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    private var resumeList: List<Resume> = listOf()
+    private var fragmentManager: FragmentManager
+
     init {
-        mfragmentManager = fragmentManager
+        this.fragmentManager = fragmentManager
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return ResumeViewHolder(
             ItemResumeBinding.inflate(
@@ -27,11 +30,20 @@ class ResumeAdapter(fragmentManager : FragmentManager) : RecyclerView.Adapter<Re
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as ResumeViewHolder).onBind(resumeList[position], mfragmentManager)
+        (holder as ResumeViewHolder).onBind(resumeList[position], fragmentManager)
     }
 
     fun setResumeList(resumeList: List<Resume>) {
         this.resumeList = resumeList
         notifyDataSetChanged()
+    }
+
+    private fun deleteResume(position: Int) {
+        if (position != RecyclerView.NO_POSITION) {
+            val tempList = resumeList.toMutableList()
+            tempList.removeAt(position)
+            resumeList = tempList
+            notifyItemRemoved(position)
+        }
     }
 }

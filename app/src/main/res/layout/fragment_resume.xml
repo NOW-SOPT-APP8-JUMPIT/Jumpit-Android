@@ -94,7 +94,7 @@
                 android:layout_width="0dp"
                 android:layout_height="185dp"
                 android:layout_marginTop="14dp"
-                android:background="@drawable/white_dash_rectangle_background"
+                android:background="@drawable/shape_white_dash_12_rect"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -208,7 +208,7 @@
                 android:layout_width="0dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="14dp"
-                android:background="@drawable/white_dash_rectangle_background"
+                android:background="@drawable/shape_white_dash_12_rect"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/clAttachmentArea">

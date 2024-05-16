@@ -1,5 +1,6 @@
 package com.sopt.now.jumpit.ui.resume
 
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -27,7 +28,7 @@ class ResumeViewModel : ViewModel() {
                 education = true,
                 title = "이력서_240424",
                 date = "2024.04.24 등록",
-                state = false
+                state = true
             ),
             Resume(
                 basicInfo = true,
@@ -43,8 +44,14 @@ class ResumeViewModel : ViewModel() {
                 education = true,
                 title = "이력서_240424",
                 date = "2024.04.24 등록",
-                state = false
+                state = true
             )
         )
+    }
+
+    fun addResume(resume : Resume) {
+        val currentList = _mockResumeList.value ?: mutableListOf()
+        currentList.add(resume)
+        _mockResumeList.value = currentList
     }
 }
