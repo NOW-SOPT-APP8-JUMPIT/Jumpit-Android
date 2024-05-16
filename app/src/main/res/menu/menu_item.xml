@@ -4,31 +4,31 @@
     <!-- Home (홈) -->
     <item
         android:id="@+id/menu_home"
-        android:icon="@drawable/icn_home_normal"
-        android:title="home" />
+        android:icon="@drawable/home_selector_icon"
+        android:title="홈" />
 
     <!-- Recruitment (개발자 채용) -->
     <item
         android:id="@+id/menu_employment"
         android:icon="@drawable/icn_employment_normal"
-        android:title="employment" />
+        android:title="개발자 채용" />
 
     <!-- Passnote (합격 족보) -->
     <item
         android:id="@+id/menu_passnote"
         android:icon="@drawable/icn_passnote_normal"
-        android:title="passnote" />
+        android:title="합격족보" />
 
     <!-- Resume (이력서) -->
     <item
         android:id="@+id/menu_resume"
-        android:icon="@drawable/icn_resume_normal"
-        android:title="resume" />
+        android:icon="@drawable/resume_selector_icon"
+        android:title="이력서" />
 
     <!-- Apply status (지원 현황) -->
     <item
         android:id="@+id/menu_apply"
         android:icon="@drawable/icn_apply_normal"
-        android:title="apply" />
+        android:title="지원현황" />
 
 </menu>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 하단바의 이력서가 눌렸을 때 selected (진한 icon) -->
+    <item android:state_checked="true" android:drawable="@drawable/icn_resume_selected"/>
+    <!-- 하단바의 이력서가 눌리지 않았을 때 normal (연한 icon) -->
+    <item android:state_checked="false" android:drawable="@drawable/icn_resume_normal"/>
+</selector>
