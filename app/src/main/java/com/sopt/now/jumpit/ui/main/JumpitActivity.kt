@@ -30,7 +30,7 @@ class JumpitActivity : BindingActivity<ActivityJumpitBinding>(R.layout.activity_
 
     private fun setupNavHostFragment() {
         val navHostFragment = // nav_host -> 나중에 fcv로 수정해야함
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment?
+            supportFragmentManager.findFragmentById(R.id.fcvJumpit) as NavHostFragment?
                 ?: return
         navController = navHostFragment.navController
     }

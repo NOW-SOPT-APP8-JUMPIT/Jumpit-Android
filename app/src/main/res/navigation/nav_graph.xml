@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/menu_home">
+    app:startDestination="@id/menuHome">
 
     <fragment
-        android:id="@+id/menu_home"
+        android:id="@+id/menuHome"
         android:name="com.sopt.now.jumpit.ui.home.HomeFragment"
         android:label="홈"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/actionHomeToResume"
-            app:destination="@id/menu_resume" />
+            app:destination="@id/menuResume" />
     </fragment>
 
     <fragment
-        android:id="@+id/menu_resume"
+        android:id="@+id/menuResume"
         android:name="com.sopt.now.jumpit.ui.resume.ResumeFragment"
         android:label="이력서"
         tools:layout="@layout/fragment_resume">
         <action
             android:id="@+id/actionResumetoHome"
-            app:destination="@id/menu_home"/>
+            app:destination="@id/menuHome"/>
     </fragment>
 
 </navigation>
