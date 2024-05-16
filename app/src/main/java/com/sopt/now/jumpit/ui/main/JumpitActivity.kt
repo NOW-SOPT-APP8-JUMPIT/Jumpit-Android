@@ -43,15 +43,15 @@ class JumpitActivity : BindingActivity<ActivityJumpitBinding>(R.layout.activity_
 
     private fun changeVisibilityOfBottomNav(destination: NavDestination) {
         if (destination.id in BottomNaviItems.bottomNaviItems) {
-            binding.bnvMain.visibility = View.VISIBLE
+            binding.bnvJumpit.visibility = View.VISIBLE
         } else {
-            binding.bnvMain.visibility = View.GONE
+            binding.bnvJumpit.visibility = View.GONE
         }
     }
 
     private fun setupBottomNavigation() {
-        binding.bnvMain.setupWithNavController(navController)
-        binding.bnvMain.setOnItemSelectedListener { item ->
+        binding.bnvJumpit.setupWithNavController(navController)
+        binding.bnvJumpit.setOnItemSelectedListener { item ->
             handleBottomNavItemClick(item)
             return@setOnItemSelectedListener true
         }
