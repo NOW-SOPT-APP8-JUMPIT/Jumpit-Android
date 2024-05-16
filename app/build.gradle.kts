@@ -88,4 +88,8 @@ dependencies {
     // Coil
     implementation("io.coil-kt:coil:2.6.0")
     implementation("jp.wasabeef.transformers:coil:1.0.6")
+
+    // Navigation
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.3.5")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.3.5")
 }
