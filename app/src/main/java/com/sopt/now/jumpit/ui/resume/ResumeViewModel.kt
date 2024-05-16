@@ -19,7 +19,7 @@ class ResumeViewModel : ViewModel() {
                 techStack = false,
                 education = false,
                 title = "이력서_240424",
-                date = "2024.04.24 등록",
+                date = "2024.04.24",
                 state = false
             ),
             Resume(
@@ -27,7 +27,7 @@ class ResumeViewModel : ViewModel() {
                 techStack = false,
                 education = true,
                 title = "이력서_240424",
-                date = "2024.04.24 등록",
+                date = "2024.04.24",
                 state = true
             ),
             Resume(
@@ -35,7 +35,7 @@ class ResumeViewModel : ViewModel() {
                 techStack = false,
                 education = false,
                 title = "이력서_240424",
-                date = "2024.04.24 등록",
+                date = "2024.04.24",
                 state = false
             ),
             Resume(
@@ -43,7 +43,7 @@ class ResumeViewModel : ViewModel() {
                 techStack = true,
                 education = true,
                 title = "이력서_240424",
-                date = "2024.04.24 등록",
+                date = "2024.04.24",
                 state = true
             )
         )

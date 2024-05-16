@@ -41,7 +41,7 @@ class AddBottomSheetDialogFragment() : BottomSheetDialogFragment() {
                     techStack = true,
                     education = true,
                     title = "이력서_240424",
-                    date = "2024.04.24 등록",
+                    date = "2024.04.24",
                     state = true
                 )
             )
