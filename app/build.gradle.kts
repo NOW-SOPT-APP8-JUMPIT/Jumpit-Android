@@ -79,4 +79,7 @@ dependencies {
 
     // Coil
     implementation(libs.bundles.coil)
+
+    // Navigation
+    implementation (libs.bundles.navigation)
 }

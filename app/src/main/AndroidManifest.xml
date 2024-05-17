@@ -16,7 +16,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name=".ui.jumpit.JumpitActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
