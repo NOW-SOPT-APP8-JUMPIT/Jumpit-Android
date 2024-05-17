@@ -9,22 +9,29 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.sopt.now.jumpit.databinding.FragmentAddBottomSheetDialogBinding
 
 class AddBottomSheetDialogFragment() : BottomSheetDialogFragment() {
-    private lateinit var binding: FragmentAddBottomSheetDialogBinding
+    private var _binding: FragmentAddBottomSheetDialogBinding? = null
+    private val binding get() = _binding!!
     private lateinit var viewModel: ResumeViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentAddBottomSheetDialogBinding.inflate(inflater, container, false)
+        _binding = FragmentAddBottomSheetDialogBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this)[ResumeViewModel::class.java]
+        viewModel =
+            ViewModelProvider(this, defaultViewModelProviderFactory)[ResumeViewModel::class.java]
         onBtnAddCloseClick()
         onTextResumeAddClick()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     private fun onBtnAddCloseClick() {
@@ -48,4 +55,5 @@ class AddBottomSheetDialogFragment() : BottomSheetDialogFragment() {
             dismiss()
         }
     }
+
 }
