@@ -91,6 +91,10 @@ coil-transformers = { group = "jp.wasabeef.transformers", name = "coil", version
 androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
 androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
 
+# Navigation
+navigation = { group = "androidx.navigation", name = "navigation-fragment-ktx", version = "2.7.7" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version = "2.7.7" }
+
 [plugins]
 androidApplication = {id = "com.android.application", version.ref = "agp"}
 kotlinAndroid = {id = "org.jetbrains.kotlin.android", version.ref = "kotlin"}
@@ -106,3 +110,4 @@ ktx = ["androidx-activity", "androidx-fragment", "androidx-lifecycle"]
 serialization = ["kotlinx-serialization", "retrofit2-kotlinx-serialization"]
 okhttps3 = ["okhttp", "okhttp-interceptor"]
 coil = ["coil-kt", "coil-transformers"]
+navigation = ["navigation", "navigation-ui"]

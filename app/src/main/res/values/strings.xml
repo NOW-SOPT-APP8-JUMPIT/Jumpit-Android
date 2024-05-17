@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Jumpit</string>
+    <string name="menuHome">홈</string>
+    <string name="menuEmployment">개발자 채용</string>
+    <string name="menuPassnote">합격족보</string>
+    <string name="menuResume">이력서</string>
+    <string name="menuApply">지원현황</string>
     <string name="tvResumeTitle">이력서</string>
     <string name="tvMyResumeTitle">나의 이력서</string>
     <string name="tvNoResume">등록된 이력서가 없습니다.</string>
