@@ -5,30 +5,30 @@
     <item
         android:id="@+id/menuHome"
         android:icon="@drawable/home_selector_icon"
-        android:title="홈" />
+        android:title="@string/menuHome" />
 
     <!-- Recruitment (개발자 채용) -->
     <item
         android:id="@+id/menuEmployment"
         android:icon="@drawable/icn_employment_normal"
-        android:title="개발자 채용" />
+        android:title="@string/menuEmployment" />
 
     <!-- Passnote (합격 족보) -->
     <item
         android:id="@+id/menuPassnote"
         android:icon="@drawable/icn_passnote_normal"
-        android:title="합격족보" />
+        android:title="@string/menuPassnote" />
 
     <!-- Resume (이력서) -->
     <item
         android:id="@+id/menuResume"
         android:icon="@drawable/resume_selector_icon"
-        android:title="이력서" />
+        android:title="@string/menuResume" />
 
     <!-- Apply status (지원 현황) -->
     <item
         android:id="@+id/menuApply"
         android:icon="@drawable/icn_apply_normal"
-        android:title="지원현황" />
+        android:title="@string/menuApply" />
 
 </menu>

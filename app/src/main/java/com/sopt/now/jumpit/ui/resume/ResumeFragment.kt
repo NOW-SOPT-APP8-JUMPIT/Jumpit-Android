@@ -13,7 +13,6 @@ class ResumeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // 레이아웃 파일을 inflate - resumeFragment의 UI 정의
         return inflater.inflate(R.layout.fragment_resume, container, false)
     }
 }
