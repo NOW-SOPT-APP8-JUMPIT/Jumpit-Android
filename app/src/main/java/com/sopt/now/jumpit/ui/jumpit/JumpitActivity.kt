@@ -1,4 +1,4 @@
-package com.sopt.now.jumpit.ui.main
+package com.sopt.now.jumpit.ui.jumpit
 
 import android.os.Bundle
 import android.view.MenuItem
