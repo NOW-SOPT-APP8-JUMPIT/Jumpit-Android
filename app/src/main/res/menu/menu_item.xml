@@ -10,13 +10,13 @@
     <!-- Recruitment (개발자 채용) -->
     <item
         android:id="@+id/menuEmployment"
-        android:icon="@drawable/icn_employment_normal"
+        android:icon="@drawable/ic_employment_normal"
         android:title="@string/menuEmployment" />
 
     <!-- Passnote (합격 족보) -->
     <item
         android:id="@+id/menuPassnote"
-        android:icon="@drawable/icn_passnote_normal"
+        android:icon="@drawable/ic_passnote_normal"
         android:title="@string/menuPassnote" />
 
     <!-- Resume (이력서) -->
@@ -28,7 +28,7 @@
     <!-- Apply status (지원 현황) -->
     <item
         android:id="@+id/menuApply"
-        android:icon="@drawable/icn_apply_normal"
+        android:icon="@drawable/ic_apply_normal"
         android:title="@string/menuApply" />
 
 </menu>
