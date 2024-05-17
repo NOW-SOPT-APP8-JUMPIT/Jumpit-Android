@@ -4,7 +4,7 @@
     <!-- Home (홈) -->
     <item
         android:id="@+id/menuHome"
-        android:icon="@drawable/home_selector_icon"
+        android:icon="@drawable/selector_home_checked"
         android:title="@string/menuHome" />
 
     <!-- Recruitment (개발자 채용) -->
@@ -22,7 +22,7 @@
     <!-- Resume (이력서) -->
     <item
         android:id="@+id/menuResume"
-        android:icon="@drawable/resume_selector_icon"
+        android:icon="@drawable/selector_resume_checked"
         android:title="@string/menuResume" />
 
     <!-- Apply status (지원 현황) -->
