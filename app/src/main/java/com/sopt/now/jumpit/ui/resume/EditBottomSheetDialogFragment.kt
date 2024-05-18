@@ -4,17 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.sopt.now.jumpit.databinding.FragmentEditBottomSheetDialogBinding
 
-class EditBottomSheetDialogFragment() : BottomSheetDialogFragment() {
-    private lateinit var binding: FragmentEditBottomSheetDialogBinding
+class EditBottomSheetDialogFragment(private val position: Int) : BottomSheetDialogFragment() {
+    private var _binding: FragmentEditBottomSheetDialogBinding? = null
+    private val binding get() = _binding!!
+
+    private val viewModel by activityViewModels<ResumeViewModel>()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentEditBottomSheetDialogBinding.inflate(inflater, container, false)
+        _binding = FragmentEditBottomSheetDialogBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -32,7 +36,13 @@ class EditBottomSheetDialogFragment() : BottomSheetDialogFragment() {
 
     private fun onTextResumeDeleteClick() {
         binding.tvDeleteResume.setOnClickListener {
-            // TODO: 이력서 삭제 기능 구현
+            viewModel.deleteResume(position)
+            dismiss()
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

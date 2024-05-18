@@ -3,27 +3,22 @@ package com.sopt.now.jumpit.ui.resume
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.PopupWindow
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.databinding.FragmentResumeBinding
 import com.sopt.now.jumpit.ui.base.BindingFragment
-import kotlinx.coroutines.CoroutineScope
 
 class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_resume) {
     private lateinit var resumeAdapter: ResumeAdapter
-    private lateinit var viewModel: ResumeViewModel
+    private val viewModel by activityViewModels<ResumeViewModel>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         onResumeHelpBtnClick()
         onAttachmentHelpBtnClick()
         onResumeAddBtnClick()
-
-        viewModel = ViewModelProvider(this)[ResumeViewModel::class.java]
 
         resumeAdapter = ResumeAdapter(requireActivity().supportFragmentManager)
         binding.rvMyResumeList.run {
@@ -31,7 +26,7 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         }
 
-        viewModel.mockResumeList.observe(viewLifecycleOwner) {resumeList ->
+        viewModel.mockResumeList.observe(viewLifecycleOwner) { resumeList ->
             if (resumeList.isEmpty()) {
                 binding.clNoResumeListArea.visibility = View.VISIBLE
                 binding.clMyResumeListArea.visibility = View.INVISIBLE

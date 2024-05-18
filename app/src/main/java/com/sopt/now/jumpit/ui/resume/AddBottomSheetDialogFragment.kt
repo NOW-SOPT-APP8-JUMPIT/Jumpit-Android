@@ -4,14 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.activityViewModels
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.sopt.now.jumpit.databinding.FragmentAddBottomSheetDialogBinding
 
 class AddBottomSheetDialogFragment() : BottomSheetDialogFragment() {
     private var _binding: FragmentAddBottomSheetDialogBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel: ResumeViewModel
+    private val viewModel by activityViewModels<ResumeViewModel>()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,8 +23,6 @@ class AddBottomSheetDialogFragment() : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel =
-            ViewModelProvider(this, defaultViewModelProviderFactory)[ResumeViewModel::class.java]
         onBtnAddCloseClick()
         onTextResumeAddClick()
     }

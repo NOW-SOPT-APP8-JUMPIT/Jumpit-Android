@@ -8,7 +8,7 @@ import com.sopt.now.jumpit.databinding.ItemResumeBinding
 class ResumeViewHolder(
     private val binding: ItemResumeBinding
 ) : RecyclerView.ViewHolder(binding.root) {
-    fun onBind(resume: Resume, fragmentManager: FragmentManager) {
+    fun onBind(position: Int, resume: Resume, fragmentManager: FragmentManager) {
         with(binding) {
             ivBasicInfo.setImageResource(if (resume.basicInfo) R.drawable.icn_dot_green else R.drawable.icn_dot_red)
             ivTechStack.setImageResource(if (resume.techStack) R.drawable.icn_dot_green else R.drawable.icn_dot_red)
@@ -21,7 +21,7 @@ class ResumeViewHolder(
                 btnToggle.setImageResource(if (resume.state) R.drawable.icn_toggleon else R.drawable.icn_toggleoff)
             }
             btnEdit.setOnClickListener {
-                val editBottomSheetDialog = EditBottomSheetDialogFragment()
+                val editBottomSheetDialog = EditBottomSheetDialogFragment(position)
                 editBottomSheetDialog.show(
                     fragmentManager,
                     editBottomSheetDialog.tag

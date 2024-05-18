@@ -30,7 +30,7 @@ class ResumeAdapter(fragmentManager: FragmentManager) :
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as ResumeViewHolder).onBind(resumeList[position], fragmentManager)
+        (holder as ResumeViewHolder).onBind(position, resumeList[position], fragmentManager)
     }
 
     fun setResumeList(resumeList: List<Resume>) {
@@ -38,12 +38,4 @@ class ResumeAdapter(fragmentManager: FragmentManager) :
         notifyDataSetChanged()
     }
 
-    private fun deleteResume(position: Int) {
-        if (position != RecyclerView.NO_POSITION) {
-            val tempList = resumeList.toMutableList()
-            tempList.removeAt(position)
-            resumeList = tempList
-            notifyItemRemoved(position)
-        }
-    }
 }
