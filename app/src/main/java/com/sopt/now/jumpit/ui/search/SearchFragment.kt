@@ -48,6 +48,7 @@ class SearchFragment : BindingFragment<FragmentSearchBinding>(R.layout.fragment_
     }
 
     private fun changeFragment(fragment: Fragment) {
+        if (fragment.isAdded) return
         parentFragmentManager.beginTransaction()
             .replace(R.id.fcvSearch, fragment)
             .commit()
