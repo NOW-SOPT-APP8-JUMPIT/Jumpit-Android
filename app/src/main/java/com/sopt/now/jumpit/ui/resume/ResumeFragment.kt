@@ -19,20 +19,30 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
         onResumeHelpBtnClick()
         onAttachmentHelpBtnClick()
         onResumeAddBtnClick()
+        initResumeAdapter()
+        observeResumeList()
+    }
 
+    private fun initResumeAdapter() {
         resumeAdapter = ResumeAdapter(requireActivity().supportFragmentManager)
         binding.rvMyResumeList.run {
             adapter = resumeAdapter
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         }
+    }
 
+    private fun observeResumeList() {
         viewModel.mockResumeList.observe(viewLifecycleOwner) { resumeList ->
             if (resumeList.isEmpty()) {
-                binding.clNoResumeListArea.visibility = View.VISIBLE
-                binding.clMyResumeListArea.visibility = View.INVISIBLE
+                with(binding) {
+                    clNoResumeListArea.visibility = View.VISIBLE
+                    clMyResumeListArea.visibility = View.INVISIBLE
+                }
             } else {
-                binding.clNoResumeListArea.visibility = View.INVISIBLE
-                binding.clMyResumeListArea.visibility = View.VISIBLE
+                with(binding) {
+                    clNoResumeListArea.visibility = View.INVISIBLE
+                    clMyResumeListArea.visibility = View.VISIBLE
+                }
             }
             binding.tvMyResumeCount.text = resumeList.size.toString()
             resumeAdapter.setResumeList(resumeList)
