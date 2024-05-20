@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/fragmentSearch">
+    app:startDestination="@id/menuHome">
 
     <fragment
         android:id="@+id/menuHome"
@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_resume">
         <action
             android:id="@+id/actionResumetoHome"
-            app:destination="@id/menuHome"/>
+            app:destination="@id/menuHome" />
     </fragment>
 
     <fragment
