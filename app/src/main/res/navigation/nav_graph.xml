@@ -25,4 +25,10 @@
             app:destination="@id/menuHome"/>
     </fragment>
 
+    <fragment
+        android:id="@+id/fragmentSearch"
+        android:name="com.sopt.now.jumpit.ui.search.SearchFragment"
+        android:label="fragment_search">
+
+    </fragment>
 </navigation>
