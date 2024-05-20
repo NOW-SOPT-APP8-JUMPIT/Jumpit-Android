@@ -85,6 +85,7 @@ dependencies {
     implementation(libs.bundles.navigation)
 
     // Room
-    implementation(libs.room)
+    implementation(libs.room.common)
+    implementation(libs.room.ktx)
     ksp(libs.room.compiler)
 }

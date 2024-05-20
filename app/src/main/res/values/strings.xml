@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Jumpit</string>
+    <string name="app_name">점핏</string>
     <string name="menuHome">홈</string>
     <string name="menuEmployment">개발자 채용</string>
     <string name="menuPassnote">합격족보</string>
