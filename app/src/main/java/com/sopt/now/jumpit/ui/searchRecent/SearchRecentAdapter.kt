@@ -9,14 +9,14 @@ import com.sopt.now.jumpit.databinding.ItemSearchRecentBinding
 import com.sopt.now.jumpit.util.view.ItemDiffCallback
 
 class SearchRecentAdapter(private val onKeywordClick: (SearchKeyword) -> (Unit), private val onDeleteClick: (SearchKeyword) -> (Unit)) :
-    ListAdapter<SearchKeyword, SearchRecentAdapter.SendQuestionViewHolder>(
+    ListAdapter<SearchKeyword, SearchRecentAdapter.SearchRecentViewHolder>(
         ItemDiffCallback<SearchKeyword>(
             onItemsTheSame = { old, new -> old.id == new.id },
             onContentsTheSame = { old, new -> old == new }
         )
     ) {
 
-    class SendQuestionViewHolder(
+    class SearchRecentViewHolder(
         private val binding: ItemSearchRecentBinding,
         private val onKeywordClick: (SearchKeyword) -> Unit,
         private val onDeleteClick: (SearchKeyword) -> Unit
@@ -31,13 +31,13 @@ class SearchRecentAdapter(private val onKeywordClick: (SearchKeyword) -> (Unit),
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SendQuestionViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchRecentViewHolder {
         val binding =
             ItemSearchRecentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return SendQuestionViewHolder(binding, onKeywordClick, onDeleteClick)
+        return SearchRecentViewHolder(binding, onKeywordClick, onDeleteClick)
     }
 
-    override fun onBindViewHolder(holder: SendQuestionViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SearchRecentViewHolder, position: Int) {
         val item = getItem(position)
         holder.bind(item)
     }

@@ -5,4 +5,6 @@
     <string name="menuPassnote">합격족보</string>
     <string name="menuResume">이력서</string>
     <string name="menuApply">지원현황</string>
+
+    <string name="searchResultCount">포지션(%d)</string>
 </resources>
