@@ -1,16 +1,16 @@
-package com.sopt.now.jumpit.ui.searchRecent
+package com.sopt.now.jumpit.ui.search
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.sopt.now.jumpit.data.model.SearchKeyword
+import com.sopt.now.jumpit.data.model.RecentKeyword
 import com.sopt.now.jumpit.databinding.ItemSearchRecentBinding
 import com.sopt.now.jumpit.util.view.ItemDiffCallback
 
-class SearchRecentAdapter(private val onKeywordClick: (SearchKeyword) -> (Unit), private val onDeleteClick: (SearchKeyword) -> (Unit)) :
-    ListAdapter<SearchKeyword, SearchRecentAdapter.SearchRecentViewHolder>(
-        ItemDiffCallback<SearchKeyword>(
+class SearchAdapter(private val onKeywordClick: (RecentKeyword) -> (Unit), private val onDeleteClick: (RecentKeyword) -> (Unit)) :
+    ListAdapter<RecentKeyword, SearchAdapter.SearchRecentViewHolder>(
+        ItemDiffCallback<RecentKeyword>(
             onItemsTheSame = { old, new -> old.id == new.id },
             onContentsTheSame = { old, new -> old == new }
         )
@@ -18,11 +18,11 @@ class SearchRecentAdapter(private val onKeywordClick: (SearchKeyword) -> (Unit),
 
     class SearchRecentViewHolder(
         private val binding: ItemSearchRecentBinding,
-        private val onKeywordClick: (SearchKeyword) -> Unit,
-        private val onDeleteClick: (SearchKeyword) -> Unit
+        private val onKeywordClick: (RecentKeyword) -> Unit,
+        private val onDeleteClick: (RecentKeyword) -> Unit
     ) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: SearchKeyword) {
+        fun bind(item: RecentKeyword) {
             binding.apply {
                 tvSearchRecentItem.text = item.keyword
                 root.setOnClickListener { onKeywordClick(item) }

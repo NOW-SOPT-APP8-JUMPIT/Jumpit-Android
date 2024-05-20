@@ -3,7 +3,7 @@ package com.sopt.now.jumpit
 import android.app.Application
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
-import com.sopt.now.jumpit.data.local.dao.SearchKeywordDao
+import com.sopt.now.jumpit.data.local.dao.RecentKeywordDao
 import com.sopt.now.jumpit.data.local.database.LocalDatabase
 import com.sopt.now.jumpit.data.repository.SearchKeywordRepository
 
@@ -20,10 +20,10 @@ class JumpitApp : Application() {
             private set
 
         fun getSearchKeywordRepository(): SearchKeywordRepository {
-            val searchKeywordDao: SearchKeywordDao =
+            val recentKeywordDao: RecentKeywordDao =
                 LocalDatabase.getInstance(appContext).searchKeywordDao()
 
-            return SearchKeywordRepository(searchKeywordDao)
+            return SearchKeywordRepository(recentKeywordDao)
         }
     }
 }

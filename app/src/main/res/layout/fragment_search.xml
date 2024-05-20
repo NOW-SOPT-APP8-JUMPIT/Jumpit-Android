@@ -38,10 +38,60 @@
                 app:searchIcon="@drawable/ic_search_search" />
         </androidx.appcompat.widget.Toolbar>
 
+        <TextView
+            android:id="@+id/tvSearchRecentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="최근 검색어"
+            android:textAppearance="@style/subtitle2"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tbSearch" />
+
+        <TextView
+            android:id="@+id/tvSearchRecentDeleteAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="전체삭제"
+            android:textAppearance="@style/body2"
+            android:textColor="@color/gray4"
+            app:layout_constraintBottom_toBottomOf="@id/tvSearchRecentTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSearchRecentTitle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSearchRecent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSearchRecentTitle" />
+
+        <ImageView
+            android:id="@+id/iv_search_recent_ad"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/img_search_ad"
+            app:layout_constraintDimensionRatio="328:75"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvSearchRecent" />
+
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fcvSearch"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

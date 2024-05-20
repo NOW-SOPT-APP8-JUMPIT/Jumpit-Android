@@ -1,25 +1,30 @@
 package com.sopt.now.jumpit.data.repository
 
-import com.sopt.now.jumpit.data.local.dao.SearchKeywordDao
-import com.sopt.now.jumpit.data.model.SearchKeyword
+import com.sopt.now.jumpit.data.local.dao.RecentKeywordDao
+import com.sopt.now.jumpit.data.model.RecentKeyword
+import java.time.LocalDateTime
 
-class SearchKeywordRepository(private val searchKeywordDao: SearchKeywordDao) {
-    suspend fun getSearchKeywords() = searchKeywordDao.getSearchKeywords()
+class SearchKeywordRepository(private val recentKeywordDao: RecentKeywordDao) {
+    suspend fun getRecentKeywords() = recentKeywordDao.getSearchKeywords()
 
-    suspend fun deleteSearchKeyword(searchKeyword: SearchKeyword) =
-        searchKeywordDao.deleteSearchKeyword(searchKeyword)
+    suspend fun deleteRecentKeyword(recentKeyword: RecentKeyword) =
+        recentKeywordDao.deleteSearchKeyword(recentKeyword)
 
-    suspend fun insertSearchKeyword(searchKeyword: SearchKeyword) {
-        searchKeywordDao.insertSearchKeyword(searchKeyword)
-        if (searchKeywordDao.countSearchKeywords() > 5) searchKeywordDao.deleteOldestSearchKeyword()
+    suspend fun insertRecentKeyword(recentKeyword: RecentKeyword) {
+        recentKeywordDao.insertSearchKeyword(recentKeyword)
+        if (recentKeywordDao.countSearchKeywords() > MAX_SEARCH_KEYWORDS) recentKeywordDao.deleteOldestSearchKeyword()
     }
 
-    suspend fun deleteAllSearchKeywords() = searchKeywordDao.deleteAllSearchKeywords()
+    suspend fun deleteAllRecentKeywords() = recentKeywordDao.deleteAllSearchKeywords()
 
-    suspend fun countSearchKeywords() = searchKeywordDao.countSearchKeywords()
+    suspend fun countRecentKeywords() = recentKeywordDao.countSearchKeywords()
 
-    suspend fun deleteOldestSearchKeyword() = searchKeywordDao.deleteOldestSearchKeyword()
+    suspend fun deleteOldestRecentKeyword() = recentKeywordDao.deleteOldestSearchKeyword()
 
-    suspend fun updateCreatedTime(searchKeyword: SearchKeyword) =
-        searchKeywordDao.updateCreatedTime(searchKeyword)
+    suspend fun updateCreatedTimeOfRecentKeyword(recentKeyword: RecentKeyword) =
+        recentKeywordDao.updateCreatedTime(recentKeyword.id, LocalDateTime.now().toString())
+
+    companion object {
+        private const val MAX_SEARCH_KEYWORDS = 5
+    }
 }

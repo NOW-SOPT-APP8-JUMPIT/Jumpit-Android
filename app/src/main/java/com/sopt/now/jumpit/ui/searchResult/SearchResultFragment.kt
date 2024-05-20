@@ -4,9 +4,10 @@ import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import com.google.android.material.snackbar.Snackbar
 import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.data.remote.response.SearchResult
@@ -17,21 +18,15 @@ class SearchResultFragment :
     BindingFragment<FragmentSearchResultBinding>(R.layout.fragment_search_result) {
 
     private lateinit var searchResultAdapter: SearchResultAdapter
-    private val viewModel: SearchResultViewModel by viewModels()
+    private val viewModel: SearchResultViewModel by activityViewModels()
     private var bottomSheet: SearchCategoryDialog? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        performSearch()
         setupRecyclerView()
         setupPositionChipClickListener()
         observeSearchResult()
-    }
-
-    private fun performSearch() {
-        val searchKeyword = arguments?.getString("keyword").orEmpty()
-        viewModel.getSearchResults(searchKeyword)
     }
 
     private fun setupRecyclerView() {

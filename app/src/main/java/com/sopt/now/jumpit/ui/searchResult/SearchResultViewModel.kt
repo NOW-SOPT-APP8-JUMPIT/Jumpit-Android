@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import com.sopt.now.jumpit.data.remote.response.SearchResult
 
 class SearchResultViewModel() : ViewModel() {
-
     private var _searchResults = MutableLiveData<List<SearchResult>>()
     val searchResults: LiveData<List<SearchResult>> get() = _searchResults
 
