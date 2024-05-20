@@ -1,357 +1,552 @@
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:backgroundTint="@color/white">
 
-    <!-- 상단 바 -->
     <LinearLayout
-        android:id="@+id/toolbarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="end"
-        android:orientation="horizontal">
-
-        <!-- 로고 이미지 -->
-        <ImageView
-            android:id="@+id/imgLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-            <!-- android:src="@drawable/img_logo" -->
-
-        <!-- 알림 아이콘 -->
-        <ImageView
-            android:id="@+id/icnAlarm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/icn_alarm" />
-
-        <!-- 마이페이지 아이콘 -->
-        <ImageView
-            android:id="@+id/icnMy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
-            android:src="@drawable/icn_my" />
-    </LinearLayout>
-
-    <!-- 검색바 -->
-    <EditText
-        android:id="@+id/editTextSearch"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:background="@drawable/shape_oval"
-        android:drawableStart="@drawable/icn_search"
-        android:hint=" ' Python '을 검색해보세요"
-        android:inputType="text"
-        android:paddingStart="10dp" />
-
-    <!-- 직무별로 보기 -->
-    <TextView
-        android:id="@+id/textViewJobView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:text="직무별로 보기"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:columnCount="4"
-        android:columnOrderPreserved="false"
-        android:orientation="horizontal"
-        android:rowCount="2">
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/layoutFrondend"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/icnFrontend"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/icn_frontend" />
-
-            <TextView
-                android:id="@+id/textFrontend"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="프론트엔드\n개발자" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutServerback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/icnServerback"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/icn_serverback" />
-
-            <TextView
-                android:id="@+id/textServerback"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="서버/백엔\n드 개발자" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutWebfull"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/icnWebfull"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/icn_webfull" />
-
-            <TextView
-                android:id="@+id/textWebfull"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="웹 풀스택\n개발자" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutSwsol"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/icnSwsol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/icn_swsol" />
-
-            <TextView
-                android:id="@+id/textSwsol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="SW/\n솔루션" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutAiml"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/icnAiml"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/icn_aiml" />
-
-            <TextView
-                android:id="@+id/textAiml"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="인공지능/\n머신러닝" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutQa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/icnQa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/icn_qa" />
-
-            <TextView
-                android:id="@+id/textQa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="QA\n엔지니어" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutAndroid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/icnAndroid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/icn_android" />
-
-            <TextView
-                android:id="@+id/textAndroid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="안드로이드\n개발자" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutJaball"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/icnJaball"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/icn_jaball" />
-
-            <TextView
-                android:id="@+id/textJaball"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="직무\n전체보기" />
-        </LinearLayout>
-    </GridLayout>
-
-    <TextView
-        android:id="@+id/textViewTheme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:text="테마별 모음 . zip"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:scrollbars="horizontal">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="200dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:orientation="horizontal"
-                android:background="@drawable/shape_rounded"
-                android:backgroundTint="@color/green_light"
-                android:gravity="center">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="테마 이름"
-                    android:textColor="#FFFFFF" />
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="47sp"
+                android:src="@drawable/img_home_logo" />
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="10dp" /> <!-- 이미지 추가 -->
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/icnAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="220sp"
+                android:layout_marginTop="53sp"
+                android:src="@drawable/icn_alarm" />
 
-            <LinearLayout
-                android:layout_width="200dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:orientation="horizontal"
-                android:background="@drawable/shape_rounded"
-                android:backgroundTint="@color/yellow_light2"
-                android:gravity="center">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="테마 이름"
-                    android:textColor="#FFFFFF" />
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="10dp" /> <!-- 이미지 추가 -->
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="200dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:orientation="horizontal"
-                android:background="@drawable/shape_rounded"
-                android:backgroundTint="#BDEFEB"
-                android:gravity="center">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="테마 이름"
-                    android:textColor="#FFFFFF" />
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="10dp" /> <!-- 이미지 추가 -->
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="200dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:orientation="horizontal"
-                android:background="@drawable/shape_rounded"
-                android:backgroundTint="#DCF0FF"
-                android:gravity="center">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="테마 이름"
-                    android:textColor="#FFFFFF" />
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginStart="10dp" /> <!-- 이미지 추가 -->
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/icnMy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="53sp"
+                android:src="@drawable/icn_my" />
         </LinearLayout>
-    </HorizontalScrollView>
-</GridLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="17sp"
+            android:src="@drawable/btn_home_topbar_aos" />
+
+        <TextView
+            android:id="@+id/textViewJobView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="17sp"
+            android:text="직무별로 보기"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:columnCount="4"
+            android:columnOrderPreserved="false"
+            android:orientation="horizontal"
+            android:rowCount="2">
+
+            <LinearLayout
+                android:id="@+id/layoutFrondend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnFrontend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icn_frontend" />
+
+                <TextView
+                    android:id="@+id/textFrontend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="프론트엔드\n개발자" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutServerback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnServerback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icn_serverback" />
+
+                <TextView
+                    android:id="@+id/textServerback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="서버/백엔\n드 개발자" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutWebfull"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnWebfull"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icn_webfull" />
+
+                <TextView
+                    android:id="@+id/textWebfull"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="웹 풀스택\n개발자" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutSwsol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnSwsol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icn_swsol" />
+
+                <TextView
+                    android:id="@+id/textSwsol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="SW/\n솔루션" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAiml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnAiml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icn_aiml" />
+
+                <TextView
+                    android:id="@+id/textAiml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="인공지능/\n머신러닝" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutQa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnQa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icn_qa" />
+
+                <TextView
+                    android:id="@+id/textQa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="QA\n엔지니어" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAndroid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnAndroid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icn_android" />
+
+                <TextView
+                    android:id="@+id/textAndroid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="안드로이드\n개발자" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutJaball"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icnJaball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icn_jaball" />
+
+                <TextView
+                    android:id="@+id/textJaball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="직무\n전체보기" />
+            </LinearLayout>
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/textViewTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="17sp"
+            android:text="테마별 모음 . zip"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="263sp"
+                    android:layout_height="84sp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_rounded"
+                    android:backgroundTint="@color/green_light"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="개발자 인터뷰가\n등록된 HOT 기업"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/img_home_hot" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="263sp"
+                    android:layout_height="84sp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_rounded"
+                    android:backgroundTint="@color/yellow_light2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="K-유니콘으로\n무럭무럭 크는 중"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/img_home_grow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="263sp"
+                    android:layout_height="84sp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_rounded"
+                    android:backgroundTint="#BDEFEB"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="채용담당자가\n읽씹 안 하는 기업"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/img_home_read" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="263sp"
+                    android:layout_height="84sp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_rounded"
+                    android:backgroundTint="#DCF0FF"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="내 연봉 앞자리가\n바뀌는 포지션"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/img_home_money" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/btn_seeall_circle" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/textViewNeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="17sp"
+            android:text="개발자에게 꼭 필요한 것만! "
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30sp"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="2">
+
+            <LinearLayout
+                android:layout_width="157sp"
+                android:layout_height="113sp"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_rounded"
+                android:backgroundTint="@color/yellow_light1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:text="\n#피드\n"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:text="주목! 너만 모르는 개발자 맞춤 소식들"
+                        android:textColor="@color/gray5"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_marginTop="10sp"
+                    android:src="@drawable/img_home_feed" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="157sp"
+                android:layout_height="113sp"
+                android:layout_margin="10sp"
+                android:background="@drawable/shape_rounded"
+                android:backgroundTint="@color/blue_light2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:text="\n#Q_A\n"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:text="개발자 취업 \n궁금증에 대한 답!"
+                        android:textColor="@color/gray5"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_marginTop="10sp"
+                    android:src="@drawable/img_home_qna" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="157sp"
+                android:layout_height="113sp"
+                android:layout_margin="10sp"
+                android:background="@drawable/shape_rounded"
+                android:backgroundTint="@color/red_light"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:text="\n#인터뷰\n"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:text="인터뷰를 통한 \n회사 문화 탐색"
+                        android:textColor="@color/gray5"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_marginTop="10sp"
+                    android:src="@drawable/img_home_interview" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="157sp"
+                android:layout_height="113sp"
+                android:layout_margin="10sp"
+                android:background="@drawable/shape_rounded"
+                android:backgroundTint="@color/blue_light1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:text="\n#콘텐츠\n"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:text="개발자라면 놓치면 안 되는 혜택 4가지!"
+                        android:textColor="@color/gray5"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:layout_marginTop="10sp"
+                    android:src="@drawable/img_home_content" />
+            </LinearLayout>
+        </GridLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60sp"
+            android:src="@drawable/btn_passresume" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="27sp"
+            android:src="@drawable/img_home_logo_gray" />
+    </LinearLayout>
+</ScrollView>
