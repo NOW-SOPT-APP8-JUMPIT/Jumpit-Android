@@ -2,6 +2,7 @@ package com.sopt.now.jumpit.ui.search
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.addCallback
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
@@ -28,6 +29,7 @@ class SearchFragment : BindingFragment<FragmentSearchBinding>(R.layout.fragment_
         setupRecentKeywords()
         setupListeners()
         setupSearchRecentRecyclerView()
+        setupOnBackPressedDispatcher()
         observeRecentKeywords()
     }
 
@@ -84,7 +86,21 @@ class SearchFragment : BindingFragment<FragmentSearchBinding>(R.layout.fragment_
 
     private fun setupNavigateToBackClickListener() {
         binding.ivSearchNavigateBack.setOnClickListener {
-            parentFragmentManager.popBackStack()
+            handleBackPress()
+        }
+    }
+
+    private fun handleBackPress() {
+        when (binding.fcvSearch.visibility) {
+            View.GONE -> binding.fcvSearch.visibility = View.VISIBLE
+            View.VISIBLE -> parentFragmentManager.popBackStack()
+            else -> {}
+        }
+    }
+
+    private fun setupOnBackPressedDispatcher() {
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            handleBackPress()
         }
     }
 
