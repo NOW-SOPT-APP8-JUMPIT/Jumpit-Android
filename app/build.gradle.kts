@@ -1,5 +1,3 @@
-import java.util.Properties
-
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
@@ -19,6 +17,7 @@ android {
         versionName = libs.versions.configVersion.toString()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "BASE_URL", getApiKey("base.url"))
     }
 
     buildTypes {
@@ -48,7 +47,6 @@ dependencies {
 
     // AndroidX
     implementation(libs.bundles.androidx)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
 
     // Test
     testImplementation(libs.bundles.test)
