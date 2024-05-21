@@ -20,10 +20,10 @@
 
         <TextView
             android:id="@+id/tvBasicInfo"
-            style="@style/body2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tvBasicInfo"
+            android:textAppearance="@style/body2"
             android:textColor="@color/gray5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,18 +34,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
-            android:src="@drawable/icn_dot_red"
+            android:src="@drawable/ic_resume_red_dot"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tvBasicInfo"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvTechStack"
-            style="@style/body2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
             android:text="@string/tvTechStack"
+            android:textAppearance="@style/body2"
             android:textColor="@color/gray5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/ivBasicInfo"
@@ -56,18 +56,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
-            android:src="@drawable/icn_dot_red"
+            android:src="@drawable/ic_resume_red_dot"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tvTechStack"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvEducation"
-            style="@style/body2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
             android:text="@string/tvEducation"
+            android:textAppearance="@style/body2"
             android:textColor="@color/gray5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/ivTechStack"
@@ -78,17 +78,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
-            android:src="@drawable/icn_dot_red"
+            android:src="@drawable/ic_resume_red_dot"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tvEducation"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/btnEdit"
+        <ImageView
+            android:id="@+id/ivEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:src="@drawable/icn_details"
+            android:src="@drawable/ic_resume_detail"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -96,10 +96,10 @@
 
     <TextView
         android:id="@+id/tvResumeTitle"
-        style="@style/body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textAppearance="@style/body"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/clResumeState"
@@ -107,21 +107,21 @@
 
     <TextView
         android:id="@+id/tvResumeDate"
-        style="@style/body2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
+        android:textAppearance="@style/body2"
         android:textColor="@color/gray3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvResumeTitle"
         tools:text="2024.04.24" />
 
     <TextView
-        style="@style/body2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:text=" 등록"
+        android:textAppearance="@style/body2"
         android:textColor="@color/gray3"
         app:layout_constraintStart_toEndOf="@id/tvResumeDate"
         app:layout_constraintTop_toBottomOf="@id/tvResumeTitle" />
@@ -139,21 +139,21 @@
 
         <TextView
             android:id="@+id/tvResumePrivate"
-            style="@style/body2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tvResumePrivate"
+            android:textAppearance="@style/body2"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/btnToggle"
+        <ImageView
+            android:id="@+id/ivToggle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:src="@drawable/icn_toggleoff"
+            android:src="@drawable/ic_resume_toggleoff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

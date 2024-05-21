@@ -20,10 +20,10 @@
 
             <TextView
                 android:id="@+id/tvResumeTitle"
-                style="@style/title1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tvResumeTitle"
+                android:textAppearance="@style/title1"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -31,7 +31,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icn_my"
+                android:src="@drawable/ic_resume_my"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,10 +46,10 @@
 
                 <TextView
                     android:id="@+id/tvMyResumeTitle"
-                    style="@style/subtitle1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tvMyResumeTitle"
+                    android:textAppearance="@style/subtitle1"
                     android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -57,33 +57,33 @@
 
                 <TextView
                     android:id="@+id/tvMyResumeCount"
-                    style="@style/subtitle1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:text="0"
+                    android:textAppearance="@style/subtitle1"
                     android:textColor="@color/green"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/tvMyResumeTitle"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageButton
-                    android:id="@+id/btnResumeHelp"
+                <ImageView
+                    android:id="@+id/ivResumeHelp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:background="@color/white"
-                    android:src="@drawable/icn_help"
+                    android:src="@drawable/ic_resume_help"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/tvMyResumeCount"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageButton
-                    android:id="@+id/btnResumeAdd"
+                <ImageView
+                    android:id="@+id/ivResumeAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
-                    android:src="@drawable/icn_add"
+                    android:src="@drawable/ic_resume_add"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -101,10 +101,10 @@
                 app:layout_constraintTop_toBottomOf="@id/clMyResumeArea">
 
                 <TextView
-                    style="@style/body1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tvNoResume"
+                    android:textAppearance="@style/body1"
                     android:textColor="@color/gray5"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -160,10 +160,10 @@
 
                 <TextView
                     android:id="@+id/tvAttachmentTitle"
-                    style="@style/subtitle1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tvAttachmentTitle"
+                    android:textAppearance="@style/subtitle1"
                     android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -171,33 +171,33 @@
 
                 <TextView
                     android:id="@+id/tvAttachmentCount"
-                    style="@style/subtitle1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:text="0"
+                    android:textAppearance="@style/subtitle1"
                     android:textColor="@color/green"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/tvAttachmentTitle"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageButton
-                    android:id="@+id/btnAttachmentHelp"
+                <ImageView
+                    android:id="@+id/ivAttachmentHelp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"
                     android:background="@color/white"
-                    android:src="@drawable/icn_help"
+                    android:src="@drawable/ic_resume_help"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/tvAttachmentCount"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageButton
-                    android:id="@+id/btnAttachmentAdd"
+                <ImageView
+                    android:id="@+id/ivAttachmentAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
-                    android:src="@drawable/icn_add"
+                    android:src="@drawable/ic_resume_add"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -214,10 +214,10 @@
                 app:layout_constraintTop_toBottomOf="@id/clAttachmentArea">
 
                 <TextView
-                    style="@style/body1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tvNoAttachment"
+                    android:textAppearance="@style/body1"
                     android:textColor="@color/gray5"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -226,12 +226,12 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                style="@style/body2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:drawableLeft="@drawable/icn_dot"
+                android:drawableLeft="@drawable/ic_resume_dot"
                 android:text="@string/tvAttachmentGuide"
+                android:textAppearance="@style/body2"
                 android:textColor="@color/gray5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/clAttachmentListArea" />

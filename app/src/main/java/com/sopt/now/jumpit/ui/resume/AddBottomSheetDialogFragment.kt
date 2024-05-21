@@ -33,7 +33,7 @@ class AddBottomSheetDialogFragment() : BottomSheetDialogFragment() {
     }
 
     private fun onBtnAddCloseClick() {
-        binding.btnAddClose.setOnClickListener {
+        binding.ivCloseAddDialog.setOnClickListener {
             dismiss()
         }
     }

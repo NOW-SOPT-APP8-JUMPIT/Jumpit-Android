@@ -16,45 +16,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/btnAddClose"
+        <ImageView
+            android:id="@+id/ivCloseAddDialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:src="@drawable/icn_x"
+            android:src="@drawable/ic_resume_close"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            style="@style/subtitle2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="추가"
+            android:text="@string/tvAddDialogHeader"
+            android:textAppearance="@style/subtitle2"
             android:textColor="@color/gray6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btnAddClose" />
+            app:layout_constraintStart_toEndOf="@id/ivCloseAddDialog" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/tvAddResume"
-        style="@style/body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/tvAddResume"
+        android:textAppearance="@style/body"
         android:textColor="@color/gray6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/clAddArea" />
 
     <TextView
-        style="@style/body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
         android:text="@string/tvGetResume"
+        android:textAppearance="@style/body"
         android:textColor="@color/gray6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvAddResume" />

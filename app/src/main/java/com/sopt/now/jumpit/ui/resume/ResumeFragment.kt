@@ -50,17 +50,17 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
     }
 
     private fun onResumeHelpBtnClick() {
-        binding.btnResumeHelp.setOnClickListener {
-            val originalImage = binding.btnResumeHelp.drawable
+        binding.ivResumeHelp.setOnClickListener {
+            val originalImage = binding.ivResumeHelp.drawable
 
             PopupWindow(requireContext()).apply {
                 contentView = layoutInflater.inflate(R.layout.popup_resume, null)
                 setBackgroundDrawable(ColorDrawable(Color.WHITE))
                 isFocusable = true
-                showAsDropDown(binding.btnResumeHelp)
+                showAsDropDown(binding.ivResumeHelp)
 
                 setOnDismissListener {
-                    binding.btnResumeHelp.setImageDrawable(originalImage)
+                    binding.ivResumeHelp.setImageDrawable(originalImage)
                 }
 
                 contentView.setOnTouchListener { _, _ ->
@@ -68,21 +68,21 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
                     true
                 }
             }
-            binding.btnResumeHelp.setImageResource(R.drawable.icn_help_select)
+            binding.ivResumeHelp.setImageResource(R.drawable.ic_resume_help_selected)
         }
     }
 
     private fun onAttachmentHelpBtnClick() {
-        binding.btnAttachmentHelp.setOnClickListener {
-            val originalImage = binding.btnAttachmentHelp.drawable
+        binding.ivAttachmentHelp.setOnClickListener {
+            val originalImage = binding.ivAttachmentHelp.drawable
             PopupWindow(requireContext()).apply {
                 contentView = layoutInflater.inflate(R.layout.popup_attachment, null)
                 setBackgroundDrawable(ColorDrawable(Color.WHITE))
                 isFocusable = true
-                showAsDropDown(binding.btnAttachmentHelp)
+                showAsDropDown(binding.ivAttachmentHelp)
 
                 setOnDismissListener {
-                    binding.btnAttachmentHelp.setImageDrawable(originalImage)
+                    binding.ivAttachmentHelp.setImageDrawable(originalImage)
                 }
 
                 contentView.setOnTouchListener { _, _ ->
@@ -90,12 +90,12 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
                     true
                 }
             }
-            binding.btnAttachmentHelp.setImageResource(R.drawable.icn_help_select)
+            binding.ivAttachmentHelp.setImageResource(R.drawable.ic_resume_help_selected)
         }
     }
 
     private fun onResumeAddBtnClick() {
-        binding.btnResumeAdd.setOnClickListener {
+        binding.ivResumeAdd.setOnClickListener {
             showAddBottomSheetDialog()
         }
     }

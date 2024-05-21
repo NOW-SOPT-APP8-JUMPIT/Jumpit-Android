@@ -29,7 +29,7 @@ class EditBottomSheetDialogFragment(private val position: Int) : BottomSheetDial
     }
 
     private fun onBtnEditCloseClick() {
-        binding.btnEditClose.setOnClickListener {
+        binding.ivCloseEditDialog.setOnClickListener {
             dismiss()
         }
     }

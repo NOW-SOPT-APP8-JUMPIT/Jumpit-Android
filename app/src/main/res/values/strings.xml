@@ -25,4 +25,9 @@
     <string name="tvGetResume">사람인 이력서 가져오기</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tvEditDialogHeader">편집</string>
+    <string name="tvShowResume">이력서 미리보기</string>
+    <string name="tvCopyResume">이력서 복사하기</string>
+    <string name="tvDeleteResume">이력서 삭제하기</string>
+    <string name="tvAddDialogHeader">추가</string>
 </resources>

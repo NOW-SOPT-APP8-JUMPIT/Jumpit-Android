@@ -16,58 +16,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/btnEditClose"
+        <ImageView
+            android:id="@+id/ivCloseEditDialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:src="@drawable/icn_x"
+            android:src="@drawable/ic_resume_close"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            style="@style/subtitle2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="편집"
+            android:text="@string/tvEditDialogHeader"
+            android:textAppearance="@style/subtitle2"
             android:textColor="@color/gray6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btnEditClose" />
+            app:layout_constraintStart_toEndOf="@id/ivCloseEditDialog" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/tvShowResume"
-        style="@style/body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="이력서 미리보기"
+        android:text="@string/tvShowResume"
+        android:textAppearance="@style/body"
         android:textColor="@color/gray6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/clEditArea" />
 
     <TextView
         android:id="@+id/tvCopyResume"
-        style="@style/body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
-        android:text="이력서 복사하기"
+        android:text="@string/tvCopyResume"
+        android:textAppearance="@style/body"
         android:textColor="@color/gray6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvShowResume" />
 
     <TextView
         android:id="@+id/tvDeleteResume"
-        style="@style/body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
-        android:text="이력서 삭제하기"
+        android:text="@string/tvDeleteResume"
+        android:textAppearance="@style/body"
         android:textColor="@color/red"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvCopyResume" />

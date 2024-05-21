@@ -10,17 +10,17 @@ class ResumeViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
     fun onBind(position: Int, resume: Resume, fragmentManager: FragmentManager) {
         with(binding) {
-            ivBasicInfo.setImageResource(if (resume.basicInfo) R.drawable.icn_dot_green else R.drawable.icn_dot_red)
-            ivTechStack.setImageResource(if (resume.techStack) R.drawable.icn_dot_green else R.drawable.icn_dot_red)
-            ivEducation.setImageResource(if (resume.education) R.drawable.icn_dot_green else R.drawable.icn_dot_red)
+            ivBasicInfo.setImageResource(if (resume.basicInfo) R.drawable.ic_resume_green_dot else R.drawable.ic_resume_red_dot)
+            ivTechStack.setImageResource(if (resume.techStack) R.drawable.ic_resume_green_dot else R.drawable.ic_resume_red_dot)
+            ivEducation.setImageResource(if (resume.education) R.drawable.ic_resume_green_dot else R.drawable.ic_resume_red_dot)
             tvResumeTitle.text = resume.title
             tvResumeDate.text = resume.date
-            btnToggle.setImageResource(if (resume.state) R.drawable.icn_toggleon else R.drawable.icn_toggleoff)
-            btnToggle.setOnClickListener {
+            ivToggle.setImageResource(if (resume.state) R.drawable.ic_resume_toggleon else R.drawable.ic_resume_toggleoff)
+            ivToggle.setOnClickListener {
                 resume.state = !resume.state
-                btnToggle.setImageResource(if (resume.state) R.drawable.icn_toggleon else R.drawable.icn_toggleoff)
+                ivToggle.setImageResource(if (resume.state) R.drawable.ic_resume_toggleon else R.drawable.ic_resume_toggleoff)
             }
-            btnEdit.setOnClickListener {
+            ivEdit.setOnClickListener {
                 val editBottomSheetDialog = EditBottomSheetDialogFragment(position)
                 editBottomSheetDialog.show(
                     fragmentManager,
