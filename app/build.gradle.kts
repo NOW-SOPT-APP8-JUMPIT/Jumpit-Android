@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
@@ -46,7 +48,6 @@ dependencies {
 
     // AndroidX
     implementation(libs.bundles.androidx)
-    implementation(libs.androidx.legacy.support.v4)
     implementation(libs.androidx.lifecycle.livedata.ktx)
 
     // Test

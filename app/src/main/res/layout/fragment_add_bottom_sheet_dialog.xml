@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/shape_white_fill_top12_rect"
-    android:paddingHorizontal="25dp"
+    android:paddingHorizontal="26dp"
     android:paddingVertical="22dp"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 

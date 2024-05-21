@@ -33,16 +33,10 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
 
     private fun observeResumeList() {
         viewModel.mockResumeList.observe(viewLifecycleOwner) { resumeList ->
-            if (resumeList.isEmpty()) {
-                with(binding) {
-                    clNoResumeListArea.visibility = View.VISIBLE
-                    clMyResumeListArea.visibility = View.INVISIBLE
-                }
-            } else {
-                with(binding) {
-                    clNoResumeListArea.visibility = View.INVISIBLE
-                    clMyResumeListArea.visibility = View.VISIBLE
-                }
+            with(binding) {
+                val hasResume = resumeList.isNotEmpty()
+                clNoResumeListArea.visibility = if (hasResume) View.INVISIBLE else View.VISIBLE
+                clMyResumeListArea.visibility = if (hasResume) View.VISIBLE else View.INVISIBLE
             }
             binding.tvMyResumeCount.text = resumeList.size.toString()
             resumeAdapter.setResumeList(resumeList)
