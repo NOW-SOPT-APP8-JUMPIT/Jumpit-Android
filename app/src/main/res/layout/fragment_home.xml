@@ -62,7 +62,7 @@
             android:layout_marginEnd="30dp"
             android:columnCount="4"
             android:columnOrderPreserved="false"
-            android:orientation="horizontal"
+            android:gravity="center_horizontal"
             android:rowCount="2">
 
             <LinearLayout
@@ -371,15 +371,17 @@
             android:textStyle="bold" />
 
         <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="30sp"
+            android:layout_marginStart="30sp"
+            android:layout_marginEnd="30sp"
+            android:layout_gravity="center"
             android:columnCount="2"
             android:orientation="horizontal"
             android:rowCount="2">
 
             <LinearLayout
-                android:layout_width="157sp"
+                android:layout_width="147sp"
                 android:layout_height="113sp"
                 android:layout_margin="10dp"
                 android:background="@drawable/shape_rounded"
@@ -405,20 +407,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10sp"
-                        android:text="주목! 너만 모르는 개발자 맞춤 소식들"
+                        android:text="주목! 너만 모르는 \n개발자 맞춤 꿀소식들"
                         android:textColor="@color/gray5"
-                        android:textSize="12sp" />
+                        android:textSize="10sp" />
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
+                    android:layout_width="45sp"
+                    android:layout_height="45sp"
                     android:layout_marginTop="10sp"
                     android:src="@drawable/img_home_feed" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="157sp"
+                android:layout_width="147sp"
                 android:layout_height="113sp"
                 android:layout_margin="10sp"
                 android:background="@drawable/shape_rounded"
@@ -444,20 +446,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10sp"
-                        android:text="개발자 취업 \n궁금증에 대한 답!"
+                        android:text="개발자 취업 궁금증에 \n대한 모든 답!"
                         android:textColor="@color/gray5"
-                        android:textSize="12sp" />
+                        android:textSize="10sp" />
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
+                    android:layout_width="45sp"
+                    android:layout_height="45sp"
                     android:layout_marginTop="10sp"
                     android:src="@drawable/img_home_qna" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="157sp"
+                android:layout_width="147sp"
                 android:layout_height="113sp"
                 android:layout_margin="10sp"
                 android:background="@drawable/shape_rounded"
@@ -483,20 +485,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10sp"
-                        android:text="인터뷰를 통한 \n회사 문화 탐색"
+                        android:text="인터뷰를 통한 \n회사의 개발 문화 탐색"
                         android:textColor="@color/gray5"
-                        android:textSize="12sp" />
+                        android:textSize="10sp" />
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
+                    android:layout_width="45sp"
+                    android:layout_height="45sp"
                     android:layout_marginTop="10sp"
                     android:src="@drawable/img_home_interview" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="157sp"
+                android:layout_width="147sp"
                 android:layout_height="113sp"
                 android:layout_margin="10sp"
                 android:background="@drawable/shape_rounded"
@@ -522,14 +524,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10sp"
-                        android:text="개발자라면 놓치면 안 되는 혜택 4가지!"
+                        android:text="개발자라면 놓치면 \n안 되는 혜택 4가지!"
                         android:textColor="@color/gray5"
-                        android:textSize="12sp" />
+                        android:textSize="10sp" />
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="50sp"
-                    android:layout_height="50sp"
+                    android:layout_width="45sp"
+                    android:layout_height="45sp"
                     android:layout_marginTop="10sp"
                     android:src="@drawable/img_home_content" />
             </LinearLayout>
