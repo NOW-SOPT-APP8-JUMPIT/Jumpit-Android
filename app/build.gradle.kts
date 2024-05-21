@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
@@ -17,6 +19,7 @@ android {
         versionName = libs.versions.configVersion.toString()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "BASE_URL", getApiKey("base.url"))
     }
 
     buildTypes {
@@ -82,4 +85,8 @@ dependencies {
 
     // Navigation
     implementation (libs.bundles.navigation)
+}
+
+fun getApiKey(propertyKey: String): String {
+    return gradleLocalProperties(rootDir).getProperty(propertyKey)
 }
