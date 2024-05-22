@@ -6,5 +6,5 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class ResumePrivateRequest(
     @SerialName("isPrivate")
-    val isPrivate: Boolean
+    var isPrivate: Boolean
 )

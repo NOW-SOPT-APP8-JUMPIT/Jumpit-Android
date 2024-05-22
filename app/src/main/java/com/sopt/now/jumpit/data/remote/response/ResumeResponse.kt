@@ -9,4 +9,6 @@ data class ResumeResponse(
     val status: Int,
     @SerialName("message")
     val message: String,
+    @SerialName("data")
+    val data: String?
 )

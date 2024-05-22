@@ -3,8 +3,10 @@ package com.sopt.now.jumpit.ui.resume
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.PopupWindow
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sopt.now.jumpit.R
@@ -21,9 +23,18 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
         onResumeAddBtnClick()
         initResumeAdapter()
         observeResumeList()
+        observeEnrollState()
+    }
+
+    private fun observeEnrollState() {
+        viewModel.enrollState.observe(viewLifecycleOwner) { state ->
+            if (state.isSuccess) viewModel.getMyResume()
+            Toast.makeText(requireContext(), state.message, Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun initResumeAdapter() {
+        viewModel.getMyResume()
         resumeAdapter = ResumeAdapter(requireActivity().supportFragmentManager)
         binding.rvMyResumeList.run {
             adapter = resumeAdapter
@@ -32,7 +43,7 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
     }
 
     private fun observeResumeList() {
-        viewModel.mockResumeList.observe(viewLifecycleOwner) { resumeList ->
+        viewModel.resumeList.observe(viewLifecycleOwner) { resumeList ->
             with(binding) {
                 val hasResume = resumeList.isNotEmpty()
                 clNoResumeListArea.visibility = if (hasResume) View.INVISIBLE else View.VISIBLE

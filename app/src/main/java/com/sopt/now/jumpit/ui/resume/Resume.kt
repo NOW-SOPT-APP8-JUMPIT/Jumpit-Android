@@ -1,10 +1,9 @@
 package com.sopt.now.jumpit.ui.resume
 
+import java.util.Date
+
 data class Resume(
-    var basicInfo: Boolean,
-    var techStack: Boolean,
-    var education: Boolean,
+    val id: Long,
     val title: String,
-    val date: String,
-    var state: Boolean,
+    var isPrivate: Boolean,
 )

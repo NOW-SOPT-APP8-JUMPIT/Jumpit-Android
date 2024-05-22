@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.sopt.now.jumpit.data.remote.request.ResumeEnrollRequest
 import com.sopt.now.jumpit.databinding.FragmentAddBottomSheetDialogBinding
 
 class AddBottomSheetDialogFragment() : BottomSheetDialogFragment() {
@@ -40,14 +41,10 @@ class AddBottomSheetDialogFragment() : BottomSheetDialogFragment() {
 
     private fun onTextResumeAddClick() {
         binding.tvAddResume.setOnClickListener {
-            viewModel.addResume(
-                Resume(
-                    basicInfo = true,
-                    techStack = true,
-                    education = true,
-                    title = "이력서_240424",
-                    date = "2024.04.24",
-                    state = true
+            viewModel.enrollResume(
+                ResumeEnrollRequest(
+                    title = "이력서_240522",
+                    userId = 1,
                 )
             )
             dismiss()
