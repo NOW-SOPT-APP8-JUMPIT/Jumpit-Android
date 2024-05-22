@@ -6,13 +6,13 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.CircleCropTransformation
-import com.sopt.now.jumpit.data.remote.response.SearchResult
+import com.sopt.now.jumpit.data.remote.response.SearchResponse
 import com.sopt.now.jumpit.databinding.ItemSearchResultBinding
 import com.sopt.now.jumpit.util.view.ItemDiffCallback
 
-class SearchResultAdapter(private val onClick: (SearchResult) -> (Unit)) :
-    ListAdapter<SearchResult, SearchResultAdapter.SearchResultViewHolder>(
-        ItemDiffCallback<SearchResult>(
+class SearchResultAdapter(private val onClick: (SearchResponse.Position) -> (Unit)) :
+    ListAdapter<SearchResponse.Position, SearchResultAdapter.SearchResultViewHolder>(
+        ItemDiffCallback<SearchResponse.Position>(
             onItemsTheSame = { old, new -> old.id == new.id },
             onContentsTheSame = { old, new -> old == new }
         )
@@ -20,18 +20,18 @@ class SearchResultAdapter(private val onClick: (SearchResult) -> (Unit)) :
 
     class SearchResultViewHolder(
         private val binding: ItemSearchResultBinding,
-        private val onClick: (SearchResult) -> Unit
+        private val onClick: (SearchResponse.Position) -> Unit
     ) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: SearchResult) {
+        fun bind(item: SearchResponse.Position) {
             binding.apply {
-                ivSearchResultLogo.load(item.image) {
+                ivSearchResultLogo.load(item.company.image) {
                     crossfade(true)
                     transformations(CircleCropTransformation())
                 }
-                tvSearchResultCompany.text = item.company
+                tvSearchResultCompany.text = item.company.name
                 tvSearchResultTitle.text = item.title
-                tvSearchResultTags.text = item.tags
+                tvSearchResultTags.text = item.skills.joinToString(" · ")
                 ivSearchResultBookmark.setOnClickListener {
                     it.isSelected = !it.isSelected
                 }

@@ -18,7 +18,7 @@ import com.sopt.now.jumpit.ui.searchResult.SearchResultViewModel
 class SearchFragment : BindingFragment<FragmentSearchBinding>(R.layout.fragment_search) {
 
     private lateinit var searchViewModel: SearchViewModel
-    private val searchResultViewModel: SearchResultViewModel by activityViewModels()
+    private val searchResultViewModel: SearchResultViewModel by activityViewModels<SearchResultViewModel>()
     private lateinit var searchAdapter: SearchAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
