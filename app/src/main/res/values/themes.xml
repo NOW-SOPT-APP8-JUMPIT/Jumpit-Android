@@ -9,4 +9,9 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <item name="android:includeFontPadding">false</item>
     </style>
+
+    <style name="BottomSheetDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/modal_slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/modal_slide_out_bottom</item>
+    </style>
 </resources>
