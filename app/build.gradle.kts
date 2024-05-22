@@ -1,8 +1,11 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.kotlinKapt)
     alias(libs.plugins.kotlinSerialization)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -17,6 +20,7 @@ android {
         versionName = libs.versions.configVersion.toString()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "BASE_URL", getApiKey("base.url"))
     }
 
     buildTypes {
@@ -81,6 +85,14 @@ dependencies {
     implementation(libs.bundles.coil)
 
     // Navigation
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.3.5")
-    implementation ("androidx.navigation:navigation-ui-ktx:2.3.5")
+    implementation(libs.bundles.navigation)
+
+    // Room
+    implementation(libs.room.common)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
+}
+
+fun getApiKey(propertyKey: String): String {
+    return gradleLocalProperties(rootDir).getProperty(propertyKey)
 }

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivSearchResultLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/img_search_dummy" />
+
+    <TextView
+        android:id="@+id/tvSearchResultCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textAppearance="@style/body2"
+        android:textColor="@color/gray5"
+        app:layout_constraintStart_toEndOf="@id/ivSearchResultLogo"
+        app:layout_constraintTop_toTopOf="@id/ivSearchResultLogo"
+        tools:text="토스뱅크" />
+
+    <TextView
+        android:id="@+id/tvSearchResultTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/body"
+        android:textColor="@color/gray5"
+        app:layout_constraintStart_toStartOf="@id/tvSearchResultCompany"
+        app:layout_constraintTop_toBottomOf="@id/tvSearchResultCompany"
+        tools:text="[토스뱅크] Frontend Developer" />
+
+    <TextView
+        android:id="@+id/tvSearchResultTags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textAppearance="@style/body2"
+        android:textColor="@color/gray4"
+        app:layout_constraintStart_toStartOf="@id/tvSearchResultCompany"
+        app:layout_constraintTop_toBottomOf="@id/tvSearchResultTitle"
+        tools:text="React · TypeScript · Next.js" />
+
+    <ImageView
+        android:id="@+id/ivSearchResultBookmark"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:src="@drawable/selector_search_bookmark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvSearchResultCompany" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/gray1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSearchResultTags" />
+</androidx.constraintlayout.widget.ConstraintLayout>

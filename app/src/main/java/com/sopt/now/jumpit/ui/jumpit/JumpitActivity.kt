@@ -1,4 +1,4 @@
-package com.sopt.now.jumpit.ui.main
+package com.sopt.now.jumpit.ui.jumpit
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -29,7 +29,7 @@ class JumpitActivity : BindingActivity<ActivityJumpitBinding>(R.layout.activity_
     }
 
     private fun setupNavHostFragment() {
-        val navHostFragment = // nav_host -> 나중에 fcv로 수정해야함
+        val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fcvJumpit) as NavHostFragment?
                 ?: return
         navController = navHostFragment.navController
