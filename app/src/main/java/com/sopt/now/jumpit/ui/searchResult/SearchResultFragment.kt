@@ -42,11 +42,12 @@ class SearchResultFragment :
     }
 
     private fun showBottomSheet() {
-        val bottomSheetDialog = SearchCategoryDialog()
-        if (!bottomSheetDialog.isAdded) {
+        val existingDialog = childFragmentManager.findFragmentByTag("SearchCategoryDialog")
+        if (existingDialog == null) {
+            val bottomSheetDialog = SearchCategoryDialog()
             bottomSheetDialog.show(
                 childFragmentManager,
-                bottomSheetDialog.tag
+                "SearchCategoryDialog"
             )
         }
     }
@@ -56,7 +57,6 @@ class SearchResultFragment :
             updateSearchResultCount(it)
             updateEmptyTextVisibility(it)
             searchResultAdapter.submitList(it)
-            Log.e("SearchResultFragmentTest", "observeSearchResult: $it")
         }
     }
 
