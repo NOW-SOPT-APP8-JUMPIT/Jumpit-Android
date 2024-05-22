@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
-import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
@@ -50,10 +49,10 @@ class SearchResultFragment :
     }
 
     private fun observeSearchResult() {
-        viewModel.searchResults.observe(viewLifecycleOwner) { searchResults ->
-            updateSearchResultCount(searchResults)
-            updateEmptyTextVisibility(searchResults)
-            searchResultAdapter.submitList(searchResults)
+        viewModel.searchResults.observe(viewLifecycleOwner) {
+            updateSearchResultCount(it)
+            updateEmptyTextVisibility(it)
+            searchResultAdapter.submitList(it)
         }
     }
 
