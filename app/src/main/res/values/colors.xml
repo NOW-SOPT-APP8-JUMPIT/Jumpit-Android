@@ -11,6 +11,7 @@
     <color name="red_light">#FEDEF5</color>
     <color name="blue_light1">#E7F1FB</color>
     <color name="blue_light2">#D6F4FF</color>
+    <color name="transparent">#00000000</color>
 
     <!-- Grayscale -->
     <color name="black">#000000</color>

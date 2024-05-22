@@ -17,13 +17,328 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_bottom_sheet_title"
+        android:id="@+id/tvSearchCategoryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
-        android:text="직무"
+        android:text="@string/searchCategoryTitle"
         android:textAppearance="@style/tag"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvSearchCategoryTitleEtc"
+        android:textAppearance="@style/tag"
+        android:textColor="@color/gray3"
+        app:layout_constraintBottom_toBottomOf="@id/tvSearchCategoryTitle"
+        app:layout_constraintStart_toEndOf="@id/tvSearchCategoryTitle"
+        app:layout_constraintTop_toTopOf="@id/tvSearchCategoryTitle" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        app:chipSpacingHorizontal="12dp"
+        app:chipSpacingVertical="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSearchCategoryTitle">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory1"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory2"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory3"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory4"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory5"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory6"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory7"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory8"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory9"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory10"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory11"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory12"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory13"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory14"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory15"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory16"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory17"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory18"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory19"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory20"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSearchCategory21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:minHeight="34dp"
+            android:text="@string/searchCategory21"
+            android:textAppearance="@style/body"
+            android:textColor="@drawable/selector_search_category_font"
+            app:chipBackgroundColor="@drawable/selector_search_category_background"
+            app:chipCornerRadius="3dp"
+            app:chipStrokeColor="@drawable/selector_search_category_stroke"
+            app:rippleColor="@null" />
+    </com.google.android.material.chip.ChipGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
