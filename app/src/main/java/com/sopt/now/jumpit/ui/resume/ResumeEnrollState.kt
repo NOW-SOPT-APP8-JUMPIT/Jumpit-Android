@@ -1,6 +1,6 @@
 package com.sopt.now.jumpit.ui.resume
 
-data class ResumeState(
+data class ResumeEnrollState(
     val isSuccess: Boolean,
     val message: String,
 )

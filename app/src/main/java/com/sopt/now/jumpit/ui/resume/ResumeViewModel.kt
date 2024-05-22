@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sopt.now.jumpit.data.ServicePool
+import com.sopt.now.jumpit.data.ServicePool.resumeService
 import com.sopt.now.jumpit.data.remote.request.ResumeEnrollRequest
 import com.sopt.now.jumpit.data.remote.request.ResumePrivateRequest
 import kotlinx.coroutines.launch
@@ -15,10 +16,10 @@ class ResumeViewModel : ViewModel() {
     val resumeList: LiveData<MutableList<Resume>>
         get() = _resumeList
 
-    private val _enrollState = MutableLiveData<ResumeState>()
-    val enrollState: LiveData<ResumeState> get() = _enrollState
+    private val _enrollState = MutableLiveData<ResumeEnrollState>()
+    val enrollState: LiveData<ResumeEnrollState> get() = _enrollState
 
-    private val resumeService by lazy { ServicePool.resumeService }
+    private val _privateState = MutableLiveData<ResumePrivateState>()
 
     fun deleteResume(position: Int) {
         val currentList = _resumeList.value ?: mutableListOf()
@@ -31,18 +32,14 @@ class ResumeViewModel : ViewModel() {
             runCatching {
                 resumeService.enrollResume(request)
             }.onSuccess {
-                if (it.code() in 200..299) {
-                    val resumeId = it.headers()["location"]
-                    _enrollState.value = it.body()?.let { it1 -> ResumeState(true, it1.message) }
-                    Log.e("ResumeViewModel", it.message())
+                if(it.status in 200..299) {
+                    _enrollState.value = ResumeEnrollState(true, it.message)
+                    Log.d("ResumeViewModel", it.toString())
                 } else {
-                    _enrollState.value =
-                        ResumeState(isSuccess = false, message = it.errorBody().toString())
-                    Log.e("ResumeViewModel1", it.message())
+                    _enrollState.value = ResumeEnrollState(false, it.message)
                 }
             }.onFailure {
-                _enrollState.value = ResumeState(isSuccess = false, message = it.message.toString())
-                Log.e("ResumeViewModel2", it.message.toString())
+                _enrollState.value = ResumeEnrollState(false, it.message.toString())
             }
         }
     }
@@ -79,10 +76,10 @@ class ResumeViewModel : ViewModel() {
             runCatching {
                 resumeService.privateResume(resumeId, request)
             }.onSuccess {
-                if (it.code() in 200..299) {
+                if(it.status in 200..299) {
                     Log.d("privateResume", it.toString())
                 } else {
-                    Log.d("ResumeViewModel", it.errorBody().toString())
+                    Log.d("ResumeViewModel", it.message)
                 }
             }.onFailure {
                 Log.e("ResumeViewModel", it.message.toString())
