@@ -1,5 +1,6 @@
 package com.sopt.now.jumpit.ui.searchResult
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -25,17 +26,17 @@ class SearchResultAdapter(private val onClick: (SearchResponse.Position) -> (Uni
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: SearchResponse.Position) {
             binding.apply {
-                ivSearchResultLogo.load(item.company.image) {
-                    crossfade(true)
-                    transformations(CircleCropTransformation())
-                }
                 tvSearchResultCompany.text = item.company.name
                 tvSearchResultTitle.text = item.title
-                tvSearchResultTags.text = item.skills.joinToString(" · ")
+                tvSearchResultTags.text = item.skills.joinToString(" · ") { it.name }
                 ivSearchResultBookmark.setOnClickListener {
                     it.isSelected = !it.isSelected
                 }
                 root.setOnClickListener { onClick(item) }
+                ivSearchResultLogo.load(item.company.image) {
+                    crossfade(true)
+                    transformations(CircleCropTransformation())
+                }
             }
         }
     }

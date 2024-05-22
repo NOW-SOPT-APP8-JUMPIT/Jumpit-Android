@@ -19,7 +19,6 @@ class SearchResultFragment :
 
     private lateinit var searchResultAdapter: SearchResultAdapter
     private val viewModel: SearchResultViewModel by activityViewModels<SearchResultViewModel>()
-    private var bottomSheet: SearchCategoryDialog? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -43,9 +42,12 @@ class SearchResultFragment :
     }
 
     private fun showBottomSheet() {
-        if (bottomSheet == null || !bottomSheet!!.isAdded) {
-            bottomSheet = SearchCategoryDialog()
-            bottomSheet!!.show(parentFragmentManager, "SearchCategoryDialog")
+        val bottomSheetDialog = SearchCategoryDialog()
+        if (!bottomSheetDialog.isAdded) {
+            bottomSheetDialog.show(
+                childFragmentManager,
+                bottomSheetDialog.tag
+            )
         }
     }
 

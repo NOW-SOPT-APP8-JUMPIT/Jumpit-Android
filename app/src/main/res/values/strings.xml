@@ -40,5 +40,6 @@
     <string name="searchCategoryTag">#태그</string>
     <string name="searchCategoryStack">기술스택</string>
     <string name="searchCategoryArea">지역</string>
+    <string name="searchHint">\'Python\'을 검색해보세요</string>
 
 </resources>

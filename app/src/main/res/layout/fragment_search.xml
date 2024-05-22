@@ -36,6 +36,7 @@
                 android:textColor="@color/gray6"
                 app:iconifiedByDefault="false"
                 app:queryBackground="@null"
+                app:queryHint="@string/searchHint"
                 app:searchIcon="@drawable/ic_search_search" />
         </androidx.appcompat.widget.Toolbar>
 

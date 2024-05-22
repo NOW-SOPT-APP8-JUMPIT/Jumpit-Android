@@ -7,12 +7,12 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.activityViewModels
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.databinding.DialogSearchCategoryBinding
 
-class SearchCategoryDialog : DialogFragment() {
+class SearchCategoryDialog : BottomSheetDialogFragment() {
     private var _binding: DialogSearchCategoryBinding? = null
     private val binding: DialogSearchCategoryBinding get() = requireNotNull(_binding)
 
@@ -31,11 +31,11 @@ class SearchCategoryDialog : DialogFragment() {
     }
 
     private fun setupDialogAppearance() {
-        dialog?.window?.apply {
-            setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-            setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-            attributes?.windowAnimations = R.style.BottomSheetDialogAnimation
-            setGravity(Gravity.BOTTOM)
+        val bottomSheet = dialog?.findViewById<View>(com.google.android.material.R.id.design_bottom_sheet)
+        bottomSheet?.let {
+            val behavior = BottomSheetBehavior.from(it)
+            behavior.state = BottomSheetBehavior.STATE_EXPANDED
+            behavior.skipCollapsed = true
         }
     }
 

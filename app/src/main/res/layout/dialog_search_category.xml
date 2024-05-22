@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_category_bottom_sheet"
+    android:background="@drawable/bg_white_radius_top_3"
     android:paddingHorizontal="16dp"
-    android:paddingBottom="32dp">
+    android:paddingBottom="32dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -38,6 +39,7 @@
         app:layout_constraintTop_toTopOf="@id/tvSearchCategoryTitle" />
 
     <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cgSearchCategory"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
@@ -341,4 +343,20 @@
             app:chipStrokeColor="@drawable/selector_search_category_stroke"
             app:rippleColor="@null" />
     </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_black_radius_3"
+        android:gravity="center"
+        android:text="검색"
+        android:textAlignment="center"
+        android:textAppearance="@style/body"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cgSearchCategory" />
 </androidx.constraintlayout.widget.ConstraintLayout>

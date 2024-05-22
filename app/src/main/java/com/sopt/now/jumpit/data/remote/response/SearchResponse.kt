@@ -15,10 +15,17 @@ data class SearchResponse(
         @SerialName("title")
         val title: String,
         @SerialName("skills")
-        val skills: List<String>,
+        val skills: List<Skill>,
         @SerialName("company")
         val company: Company
     ) {
+        @Serializable
+        data class Skill(
+            @SerialName("name")
+            val name: String,
+            @SerialName("image")
+            val image: String
+        )
         @Serializable
         data class Company(
             @SerialName("id")
@@ -26,7 +33,9 @@ data class SearchResponse(
             @SerialName("name")
             val name: String,
             @SerialName("image")
-            val image: String
+            val image: String,
+            @SerialName("description")
+            val description: String
         )
     }
 }
