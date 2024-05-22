@@ -1,6 +1,5 @@
 package com.sopt.now.jumpit.ui.search
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,20 +21,12 @@ class SearchViewModel(private val searchKeywordRepository: SearchKeywordReposito
     fun getSearchKeywords() {
         viewModelScope.launch {
             _recentKeywords.value = searchKeywordRepository.getRecentKeywords()
-            Log.e("SearchViewModelTest", "getSearchKeywords: ${_recentKeywords.value}")
         }
     }
 
     fun deleteSearchKeyword(recentKeyword: RecentKeyword) {
         viewModelScope.launch {
             searchKeywordRepository.deleteRecentKeyword(recentKeyword)
-            getSearchKeywords()
-        }
-    }
-
-    fun updateCreatedTime(recentKeyword: RecentKeyword) {
-        viewModelScope.launch {
-            searchKeywordRepository.updateCreatedTimeOfRecentKeyword(recentKeyword)
             getSearchKeywords()
         }
     }

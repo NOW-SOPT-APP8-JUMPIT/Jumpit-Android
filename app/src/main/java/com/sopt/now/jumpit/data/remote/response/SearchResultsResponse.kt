@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class SearchResponse(
+data class SearchResultsResponse(
     @SerialName("position")
     val positions: List<Position>
 ) {

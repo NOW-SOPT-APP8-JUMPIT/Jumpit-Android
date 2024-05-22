@@ -8,7 +8,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import com.sopt.now.jumpit.JumpitApp
 import com.sopt.now.jumpit.R
-import com.sopt.now.jumpit.data.model.RecentKeyword
 import com.sopt.now.jumpit.databinding.FragmentSearchBinding
 import com.sopt.now.jumpit.ui.base.BaseFactory
 import com.sopt.now.jumpit.ui.base.BindingFragment
@@ -31,6 +30,7 @@ class SearchFragment : BindingFragment<FragmentSearchBinding>(R.layout.fragment_
         setupSearchRecentRecyclerView()
         setupOnBackPressedDispatcher()
         observeRecentKeywords()
+        observeSelectedCategories()
     }
 
     private fun setupDefaultFragment() {
@@ -67,8 +67,7 @@ class SearchFragment : BindingFragment<FragmentSearchBinding>(R.layout.fragment_
     private fun setupSearchViewQueryTextListener() {
         binding.svSearch.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                searchViewModel.insertSearchKeyword(query.orEmpty())
-                performSearch(RecentKeyword(keyword = query.orEmpty()))
+                performSearch(query.orEmpty())
                 return false
             }
 
@@ -78,8 +77,9 @@ class SearchFragment : BindingFragment<FragmentSearchBinding>(R.layout.fragment_
         })
     }
 
-    private fun performSearch(recentKeyword: RecentKeyword) {
-        searchResultViewModel.getSearchResults(recentKeyword.keyword)
+    private fun performSearch(keyword: String) {
+        searchViewModel.insertSearchKeyword(keyword)
+        searchResultViewModel.getSearchResults(keyword)
         binding.fcvSearch.visibility = View.VISIBLE
         binding.svSearch.clearFocus()
     }
@@ -91,10 +91,16 @@ class SearchFragment : BindingFragment<FragmentSearchBinding>(R.layout.fragment_
     }
 
     private fun handleBackPress() {
-        when (binding.fcvSearch.visibility) {
-            View.GONE -> binding.fcvSearch.visibility = View.VISIBLE
-            View.VISIBLE -> parentFragmentManager.popBackStack()
-            else -> {}
+        with(binding) {
+            when (fcvSearch.visibility) {
+                View.GONE -> {
+                    fcvSearch.visibility = View.VISIBLE
+                    svSearch.setQuery(searchResultViewModel.pastSearchKeyword.value, false)
+                    svSearch.clearFocus()
+                }
+                View.VISIBLE -> parentFragmentManager.popBackStack()
+                else -> {}
+            }
         }
     }
 
@@ -107,9 +113,8 @@ class SearchFragment : BindingFragment<FragmentSearchBinding>(R.layout.fragment_
     private fun setupSearchRecentRecyclerView() {
         searchAdapter = SearchAdapter(
             onKeywordClick = {
-                searchViewModel.updateCreatedTime(it)
                 binding.svSearch.setQuery(it.keyword, false)
-                performSearch(it)
+                performSearch(it.keyword)
             },
             onDeleteClick = { searchViewModel.deleteSearchKeyword(it) }
         )
@@ -125,6 +130,12 @@ class SearchFragment : BindingFragment<FragmentSearchBinding>(R.layout.fragment_
     private fun observeRecentKeywords() {
         searchViewModel.recentKeywords.observe(viewLifecycleOwner) { keywords ->
             searchAdapter.submitList(keywords)
+        }
+    }
+
+    private fun observeSelectedCategories() {
+        searchResultViewModel.checkedCategories.observe(viewLifecycleOwner) {
+            performSearch(binding.svSearch.query.toString())
         }
     }
 }

@@ -4,13 +4,12 @@ import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
-import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.snackbar.Snackbar
 import com.sopt.now.jumpit.R
-import com.sopt.now.jumpit.data.remote.response.SearchResponse
+import com.sopt.now.jumpit.data.remote.response.SearchResultsResponse
 import com.sopt.now.jumpit.databinding.FragmentSearchResultBinding
 import com.sopt.now.jumpit.ui.base.BindingFragment
 
@@ -60,14 +59,14 @@ class SearchResultFragment :
         }
     }
 
-    private fun updateSearchResultCount(searchResults: List<SearchResponse.Position>) {
+    private fun updateSearchResultCount(searchResults: List<SearchResultsResponse.Position>) {
         binding.tvSearchResultCount.text = createSpannableString(
             getString(R.string.searchResultCount, searchResults.size),
             searchResults.size
         )
     }
 
-    private fun updateEmptyTextVisibility(searchResults: List<SearchResponse.Position>) {
+    private fun updateEmptyTextVisibility(searchResults: List<SearchResultsResponse.Position>) {
         when (searchResults.isEmpty()) {
             true -> binding.llSearchResultEmpty.visibility = View.VISIBLE
             false -> binding.llSearchResultEmpty.visibility = View.GONE
