@@ -1,15 +1,11 @@
 package com.sopt.now.jumpit.ui.searchResult
 
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.databinding.DialogSearchCategoryBinding
 
 class SearchCategoryDialog : BottomSheetDialogFragment() {
@@ -27,10 +23,10 @@ class SearchCategoryDialog : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupDialogAppearance()
+        setupDialogBehavior()
     }
 
-    private fun setupDialogAppearance() {
+    private fun setupDialogBehavior() {
         val bottomSheet = dialog?.findViewById<View>(com.google.android.material.R.id.design_bottom_sheet)
         bottomSheet?.let {
             val behavior = BottomSheetBehavior.from(it)
