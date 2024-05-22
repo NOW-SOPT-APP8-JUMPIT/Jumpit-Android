@@ -35,7 +35,9 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
 
     private fun initResumeAdapter() {
         viewModel.getMyResume()
-        resumeAdapter = ResumeAdapter(requireActivity().supportFragmentManager)
+        resumeAdapter = ResumeAdapter(requireActivity().supportFragmentManager){
+
+        }
         binding.rvMyResumeList.run {
             adapter = resumeAdapter
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
@@ -50,7 +52,7 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
                 clMyResumeListArea.visibility = if (hasResume) View.VISIBLE else View.INVISIBLE
             }
             binding.tvMyResumeCount.text = resumeList.size.toString()
-            resumeAdapter.setResumeList(resumeList)
+            resumeAdapter.submitList(resumeList)
         }
     }
 

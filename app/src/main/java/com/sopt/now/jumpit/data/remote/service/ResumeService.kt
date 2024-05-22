@@ -1,9 +1,9 @@
 package com.sopt.now.jumpit.data.remote.service
 
+import MyResumeResponse
 import com.sopt.now.jumpit.data.remote.request.ResumeEnrollRequest
 import com.sopt.now.jumpit.data.remote.request.ResumePrivateRequest
 import com.sopt.now.jumpit.data.remote.response.BaseResponse
-import com.sopt.now.jumpit.data.remote.response.MyResumeResponse
 import com.sopt.now.jumpit.data.remote.response.ResumeResponse
 import retrofit2.Response
 import retrofit2.http.Body
@@ -21,7 +21,7 @@ interface ResumeService {
     @GET("resumes/{userId}")
     suspend fun getMyResume(
         @Path("userId") userId: Long,
-    ): Response<MyResumeResponse>
+    ): BaseResponse<MyResumeResponse>
 
     @PATCH("resumes/{resumeId}")
     suspend fun privateResume(

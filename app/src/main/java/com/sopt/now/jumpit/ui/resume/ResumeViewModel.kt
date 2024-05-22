@@ -52,19 +52,21 @@ class ResumeViewModel : ViewModel() {
             runCatching {
                 resumeService.getMyResume(userId = 1)
             }.onSuccess {
-                if (it.code() in 200..299) {
-                    val resumes = it.body()?.data?.resumes ?: emptyList()
-                    _resumeList.postValue(
-                        resumes.map {
-                            Resume(
-                                id = it.id,
-                                title = it.title,
-                                isPrivate = it.isPrivate,
-                            )
-                        }.toMutableList()
-                    )
+                if (it.status in 200..299) {
+                    val resumes = it.data?.resumes
+                    if (resumes != null) {
+                        _resumeList.postValue(
+                            resumes.map {
+                                Resume(
+                                    id = it.id,
+                                    title = it.title,
+                                    isPrivate = it.isPrivate,
+                                )
+                            }.toMutableList()
+                        )
+                    }
                 } else {
-                    Log.e("ResumeViewModel", it.message())
+                    Log.e("ResumeViewModel", it.message)
                 }
             }.onFailure {
                 Log.e("ResumeViewModel", it.message.toString())
