@@ -9,8 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.sopt.now.jumpit.JumpitApp
 import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.databinding.FragmentSearchBinding
-import com.sopt.now.jumpit.ui.base.BaseFactory
-import com.sopt.now.jumpit.ui.base.BindingFragment
+import com.sopt.now.jumpit.ui.common.base.BaseFactory
+import com.sopt.now.jumpit.ui.common.base.BindingFragment
 import com.sopt.now.jumpit.ui.searchResult.SearchResultFragment
 import com.sopt.now.jumpit.ui.searchResult.SearchResultViewModel
 

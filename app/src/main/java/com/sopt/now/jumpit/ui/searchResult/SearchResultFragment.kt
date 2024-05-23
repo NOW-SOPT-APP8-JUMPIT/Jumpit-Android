@@ -11,7 +11,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.data.remote.response.SearchResultsResponse
 import com.sopt.now.jumpit.databinding.FragmentSearchResultBinding
-import com.sopt.now.jumpit.ui.base.BindingFragment
+import com.sopt.now.jumpit.ui.common.base.BindingFragment
 
 class SearchResultFragment :
     BindingFragment<FragmentSearchResultBinding>(R.layout.fragment_search_result) {
