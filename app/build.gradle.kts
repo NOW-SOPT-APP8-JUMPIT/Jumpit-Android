@@ -50,6 +50,7 @@ dependencies {
 
     // AndroidX
     implementation(libs.bundles.androidx)
+    implementation(libs.compose.preview.renderer)
 
     // Test
     testImplementation(libs.bundles.test)

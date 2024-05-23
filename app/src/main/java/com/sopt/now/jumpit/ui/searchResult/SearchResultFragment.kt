@@ -12,6 +12,7 @@ import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.data.remote.response.SearchResult
 import com.sopt.now.jumpit.databinding.FragmentSearchResultBinding
 import com.sopt.now.jumpit.ui.base.BindingFragment
+import com.sopt.now.jumpit.ui.detail.DetailFragment
 
 class SearchResultFragment :
     BindingFragment<FragmentSearchResultBinding>(R.layout.fragment_search_result) {
@@ -30,7 +31,10 @@ class SearchResultFragment :
 
     private fun setupRecyclerView() {
         searchResultAdapter = SearchResultAdapter {
-            Snackbar.make(binding.root, it.title, Snackbar.LENGTH_SHORT).show()
+            val fragmentDetail = DetailFragment()
+            val bundle = Bundle()
+            bundle.putLong("positionId", it.id.toLong())
+            fragmentDetail.arguments = bundle
         }
         binding.rvSearchResult.adapter = searchResultAdapter
     }
