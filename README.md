@@ -56,7 +56,7 @@
 
 </br>
 
-## 💻 Code Convention> 
+## 💻 Code Convention
 - 사용할 커밋 타입은 다음과 같다.
   - 🍯 feat: 새로운 기능 추가
   - ♻️ refactor: 코드 리팩토링
