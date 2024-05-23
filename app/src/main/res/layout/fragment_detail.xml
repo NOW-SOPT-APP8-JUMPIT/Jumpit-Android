@@ -97,7 +97,6 @@
                                 app:layout_constraintTop_toBottomOf="@id/tv_detail_job_title" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
-
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
