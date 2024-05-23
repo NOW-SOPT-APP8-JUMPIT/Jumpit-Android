@@ -1,5 +1,6 @@
 package com.sopt.now.jumpit.ui.detail
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -28,7 +29,7 @@ class DetailViewModel : ViewModel() {
                 if (response.status in 200..299) {
                     val temp = response.data
                     if(temp != null) {
-                        _detailInfo.value = temp
+                        _detailInfo.value = temp!!
                         _errorMessage.value = null
                     }
                 } else {
@@ -36,6 +37,7 @@ class DetailViewModel : ViewModel() {
                 }
             }.onFailure { throwable ->
                 _isLoading.value = false
+                Log.e("", "4")
                 _errorMessage.value = throwable.message
             }
         }

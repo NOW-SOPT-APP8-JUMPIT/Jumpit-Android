@@ -33,11 +33,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         buildConfig = true
@@ -50,7 +50,6 @@ dependencies {
 
     // AndroidX
     implementation(libs.bundles.androidx)
-    implementation(libs.compose.preview.renderer)
 
     // Test
     testImplementation(libs.bundles.test)
