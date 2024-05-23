@@ -50,7 +50,6 @@
         app:layout_constraintTop_toBottomOf="@id/tvSearchCategoryTitle">
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -64,7 +63,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -78,7 +76,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -92,7 +89,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -106,7 +102,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -120,7 +115,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -134,7 +128,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -148,7 +141,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -162,7 +154,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -176,7 +167,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -190,7 +180,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -204,7 +193,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -218,7 +206,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -232,7 +219,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -246,7 +232,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -260,7 +245,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -274,7 +258,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -288,7 +271,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -302,7 +284,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -316,7 +297,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
@@ -330,7 +310,6 @@
             app:rippleColor="@null" />
 
         <com.google.android.material.chip.Chip
-            android:id="@+id/chipSearchCategory21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checkable="true"
