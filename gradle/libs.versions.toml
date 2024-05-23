@@ -1,7 +1,7 @@
 [versions]
 agp = "8.1.3"
 kotlin = "1.9.0"
-kotlin-serialization = "1.8.0"
+kotlin-serialization = "1.9.0"
 compileSdk = "34"
 minSdk = "30"
 targetSdk = "34"
@@ -47,6 +47,8 @@ androidx-lifecycle-ext = "2.2.0"
 # Coil
 coil-kt = "2.6.0"
 coil-transformers = "1.0.6"
+legacySupportV4 = "1.0.0"
+lifecycleLivedataKtx = "2.7.0"
 
 # Navigation
 androidx-navigation = "2.7.7"
@@ -98,6 +100,8 @@ viewmodel = { group = "androidx.lifecycle", name = "lifecycle-extensions", versi
 # Coil
 coil-kt = { group = "io.coil-kt", name = "coil", version.ref = "coil-kt" }
 coil-transformers = { group = "jp.wasabeef.transformers", name = "coil", version.ref = "coil-transformers" }
+androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
 
 # Navigation
 navigation = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "androidx-navigation" }
