@@ -9,8 +9,12 @@ import com.sopt.now.jumpit.databinding.ItemResumeBinding
 import com.sopt.now.jumpit.util.view.ItemDiffCallback
 
 class ResumeAdapter(fragmentManager: FragmentManager,
-    private val onClick: () -> Unit) :
-    ListAdapter<Resume, ResumeViewHolder>(DiffUtil) {
+    private val onClick: (Long, Boolean) -> Unit) :
+    ListAdapter<Resume, ResumeViewHolder>(ItemDiffCallback<Resume>(
+        onItemsTheSame = { old, new -> old.id == new.id },
+        onContentsTheSame = { old, new -> old == new }
+
+    )) {
     private var fragmentManager: FragmentManager
 
     init {
@@ -29,13 +33,6 @@ class ResumeAdapter(fragmentManager: FragmentManager,
 
     override fun onBindViewHolder(holder: ResumeViewHolder, position: Int) {
         holder.onBind(position, getItem(position), fragmentManager)
-    }
-
-    companion object {
-        private val DiffUtil = ItemDiffCallback<Resume>(
-            onItemsTheSame = { old, new -> old.id == new.id },
-            onContentsTheSame = { old, new -> old == new }
-        )
     }
 
 }

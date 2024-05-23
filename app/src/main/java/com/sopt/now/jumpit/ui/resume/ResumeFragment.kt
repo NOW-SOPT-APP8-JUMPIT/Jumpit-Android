@@ -1,5 +1,6 @@
 package com.sopt.now.jumpit.ui.resume
 
+import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sopt.now.jumpit.R
+import com.sopt.now.jumpit.data.remote.request.ResumePrivateRequest
 import com.sopt.now.jumpit.databinding.FragmentResumeBinding
 import com.sopt.now.jumpit.ui.base.BindingFragment
 
@@ -35,8 +37,8 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
 
     private fun initResumeAdapter() {
         viewModel.getMyResume()
-        resumeAdapter = ResumeAdapter(requireActivity().supportFragmentManager){
-
+        resumeAdapter = ResumeAdapter(requireActivity().supportFragmentManager){ resumeId, isPrivate ->
+            viewModel.privateResume(resumeId, ResumePrivateRequest(isPrivate))
         }
         binding.rvMyResumeList.run {
             adapter = resumeAdapter

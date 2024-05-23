@@ -19,8 +19,6 @@ class ResumeViewModel : ViewModel() {
     private val _enrollState = MutableLiveData<ResumeEnrollState>()
     val enrollState: LiveData<ResumeEnrollState> get() = _enrollState
 
-    private val _privateState = MutableLiveData<ResumePrivateState>()
-
     fun deleteResume(position: Int) {
         val currentList = _resumeList.value ?: mutableListOf()
         currentList.removeAt(position)
