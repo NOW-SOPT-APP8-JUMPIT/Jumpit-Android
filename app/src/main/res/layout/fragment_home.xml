@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="220dp"
                 android:layout_marginTop="53dp"
-                android:src="@drawable/icn_alarm" />
+                android:src="@drawable/ic_home_alarm" />
 
             <ImageView
                 android:id="@+id/icnMy"
@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="53dp"
-                android:src="@drawable/icn_my" />
+                android:src="@drawable/ic_home_my" />
         </LinearLayout>
 
         <ImageView
@@ -77,7 +77,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/icn_frontend" />
+                    android:src="@drawable/ic_home_frontend" />
 
                 <TextView
                     android:id="@+id/textFrontend"
@@ -100,7 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/icn_serverback" />
+                    android:src="@drawable/ic_home_serverback" />
 
                 <TextView
                     android:id="@+id/textServerback"
@@ -123,7 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/icn_webfull" />
+                    android:src="@drawable/ic_home_webfull" />
 
                 <TextView
                     android:id="@+id/textWebfull"
@@ -146,7 +146,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/icn_swsol" />
+                    android:src="@drawable/ic_home_swsol" />
 
                 <TextView
                     android:id="@+id/textSwsol"
@@ -169,7 +169,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/icn_aiml" />
+                    android:src="@drawable/ic_home_aiml" />
 
                 <TextView
                     android:id="@+id/textAiml"
@@ -192,7 +192,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/icn_qa" />
+                    android:src="@drawable/ic_home_qa" />
 
                 <TextView
                     android:id="@+id/textQa"
@@ -215,7 +215,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/icn_android" />
+                    android:src="@drawable/ic_home_android" />
 
                 <TextView
                     android:id="@+id/textAndroid"
@@ -238,7 +238,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/icn_jaball"
+                    android:src="@drawable/ic_home_jaball"
                     android:textAppearance="@style/body" />
 
                 <TextView
