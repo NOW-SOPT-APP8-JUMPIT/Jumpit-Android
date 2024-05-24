@@ -11,6 +11,7 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <item name="android:includeFontPadding">false</item>
+        <item name="android:windowBackground">@color/white</item>
     </style>
 
     <style name="BottomSheetDialogAnimation">
