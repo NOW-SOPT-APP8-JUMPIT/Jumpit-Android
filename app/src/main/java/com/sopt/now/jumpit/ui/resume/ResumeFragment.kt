@@ -31,7 +31,6 @@ class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_
     private fun observeEnrollState() {
         viewModel.enrollState.observe(viewLifecycleOwner) { state ->
             if (state.isSuccess) viewModel.getMyResume()
-            Toast.makeText(requireContext(), state.message, Toast.LENGTH_SHORT).show()
         }
     }
 

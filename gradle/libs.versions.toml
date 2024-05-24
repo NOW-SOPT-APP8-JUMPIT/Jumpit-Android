@@ -57,6 +57,7 @@ room = "2.6.1"
 
 # KSP
 ksp = "1.9.0-1.0.13"
+composePreviewRenderer = "0.0.1-alpha01"
 
 [libraries]
 # androidx
@@ -110,6 +111,7 @@ navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", ver
 room-common = { group = "androidx.room", name = "room-common", version.ref = "room" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+compose-preview-renderer = { group = "com.android.tools.compose", name = "compose-preview-renderer", version.ref = "composePreviewRenderer" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

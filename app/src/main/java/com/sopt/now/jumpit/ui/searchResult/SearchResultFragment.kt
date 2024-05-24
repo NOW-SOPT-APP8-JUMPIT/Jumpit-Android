@@ -6,8 +6,9 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.view.View
 import androidx.core.content.ContextCompat
+import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
-import com.google.android.material.snackbar.Snackbar
+import androidx.navigation.fragment.findNavController
 import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.data.remote.response.SearchResultsResponse
 import com.sopt.now.jumpit.databinding.FragmentSearchResultBinding
@@ -29,9 +30,16 @@ class SearchResultFragment :
 
     private fun setupRecyclerView() {
         searchResultAdapter = SearchResultAdapter {
-            Snackbar.make(binding.root, it.title, Snackbar.LENGTH_SHORT).show()
+            navigateToDetail(it.id)
         }
         binding.rvSearchResult.adapter = searchResultAdapter
+    }
+
+    private fun navigateToDetail(positionId: Long){
+        findNavController().navigate(
+            R.id.fragmentDetail,
+            bundleOf("positionId" to positionId)
+        )
     }
 
     private fun setupPositionChipClickListener() {
