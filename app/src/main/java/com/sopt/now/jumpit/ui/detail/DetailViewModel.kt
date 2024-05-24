@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.sopt.now.jumpit.data.ServicePool.detailService
+import com.sopt.now.jumpit.data.ServicePool
 import com.sopt.now.jumpit.data.remote.response.DetailResponse
 import kotlinx.coroutines.launch
 
@@ -23,7 +23,7 @@ class DetailViewModel : ViewModel() {
         _isLoading.value = true
         viewModelScope.launch {
             runCatching {
-                detailService.getPositionDetail(positionId)
+                ServicePool.noticeService.getPositionDetail(positionId)
             }.onSuccess { response ->
                 _isLoading.value = false
                 if (response.status in 200..299) {

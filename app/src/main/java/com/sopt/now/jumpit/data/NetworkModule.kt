@@ -4,7 +4,6 @@ package com.sopt.now.jumpit.data
 import android.util.Log
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.sopt.now.jumpit.BuildConfig
-import com.sopt.now.jumpit.data.remote.service.DetailService
 import com.sopt.now.jumpit.data.remote.service.NoticeService
 import com.sopt.now.jumpit.data.remote.service.ResumeService
 import kotlinx.serialization.json.Json
@@ -45,5 +44,4 @@ object NetworkModule {
 object ServicePool {
     val resumeService: ResumeService by lazy { NetworkModule.create() }
     val noticeService: NoticeService by lazy { NetworkModule.create() }
-    val detailService: DetailService by lazy { NetworkModule.create() }
 }
