@@ -9,6 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.activityViewModels
 import coil.load
 import com.sopt.now.jumpit.R
+import com.sopt.now.jumpit.data.remote.response.SearchResultsResponse
 import com.sopt.now.jumpit.data.remote.response.SimilarCompanyDummyData
 import com.sopt.now.jumpit.data.remote.response.Skill
 import com.sopt.now.jumpit.databinding.FragmentDetailBinding
@@ -17,15 +18,48 @@ import com.sopt.now.jumpit.ui.common.base.BindingFragment
 class DetailFragment : BindingFragment<FragmentDetailBinding>(R.layout.fragment_detail) {
     private val viewModel by activityViewModels<DetailViewModel>()
     private lateinit var similarCompanyDummyData: SimilarCompanyDummyData
+    private val similarPositionAdapter: DetailSimilarPositionAdapter =
+        DetailSimilarPositionAdapter()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val positionId = arguments?.getLong("positionId") ?: 0
 
-        similarCompanyDummyData = SimilarCompanyDummyData(
-            imageUrl = R.drawable.img_detail_dummy,
-            companyName = "엠비아이솔루션",
-            jobTitle = "[프론트엔드] React 미드레벨 챗봇 개발자"
+        val dummySimilarPositions = listOf(
+            SearchResultsResponse.Position(
+                id = 1,
+                title = "프론트엔드 개발자",
+                skills = listOf(
+                    SearchResultsResponse.Position.Skill("Docker", ""),
+                    SearchResultsResponse.Position.Skill("MySQL", ""),
+                    SearchResultsResponse.Position.Skill("Python", "")
+                ),
+                company = SearchResultsResponse.Position.Company(
+                    id = 1,
+                    name = "엠비아이솔루션",
+                    image = "https://github.com/NOW-SOPT-APP8-JUMPIT/Jumpit-Android/assets/127238018/393fcdea-d070-4e34-9dbf-3e0bde5798a8",
+                    description = "나경하이"
+                )
+            ),
+            SearchResultsResponse.Position(
+                id = 2,
+                title = "백엔드 개발자",
+                skills = listOf(
+                    SearchResultsResponse.Position.Skill("typescript", ""),
+                    SearchResultsResponse.Position.Skill("react", ""),
+                    SearchResultsResponse.Position.Skill("javascript", ""),
+                    SearchResultsResponse.Position.Skill("solidity", ""),
+                ),
+                company = SearchResultsResponse.Position.Company(
+                    id = 2,
+                    name = "르네상스랩스",
+                    image = "https://github-production-user-asset-6210df.s3.amazonaws.com/127238018/333504904-506586c3-3af6-482a-b632-d450bbe946b3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240524%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240524T140948Z&X-Amz-Expires=300&X-Amz-Signature=2e611111cec813028885c71887c8ca5cfb472deb00a0b39c5ee113bc9f9cbdfe&X-Amz-SignedHeaders=host&actor_id=127238018&key_id=0&repo_id=796325247",
+                    description = "가을하이"
+                )
+            )
         )
+        binding.rvDetailSimilarPositions.adapter = similarPositionAdapter
+        similarPositionAdapter.submitList(dummySimilarPositions)
 
         viewModel.getDetailInfo(positionId.toLong())
         viewModel.detailInfo.observe(viewLifecycleOwner) {
@@ -46,11 +80,6 @@ class DetailFragment : BindingFragment<FragmentDetailBinding>(R.layout.fragment_
 
             binding.companyImageBottom.load(it.company.image)
             binding.tvDetailCompanyNameBottom.text = it.company.name
-
-            binding.companyImagePlus.load(similarCompanyDummyData.imageUrl)
-            binding.tvDetailCompanyNamePlus.text = similarCompanyDummyData.companyName
-            binding.tvDetailJobTitlePlus.text = similarCompanyDummyData.jobTitle
-
 
             addSkills(it.skills)
         }

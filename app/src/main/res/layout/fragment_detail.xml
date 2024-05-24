@@ -55,7 +55,7 @@
                         android:id="@+id/company_image"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="50dp"
+                        android:layout_marginStart="20dp"
                         android:layout_marginEnd="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +77,7 @@
 
                             <TextView
                                 android:id="@+id/tv_detail_job_title"
-                                android:layout_width="wrap_content"
+                                android:layout_width="246dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:layout_marginEnd="26dp"
@@ -293,7 +293,7 @@
                         android:id="@+id/tv_detail_skills"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="20dp"
+                        android:padding="16dp"
                         android:text="기술스택"
                         android:textAppearance="@style/subtitle1"
                         android:textColor="@color/black"
@@ -321,7 +321,7 @@
                         android:orientation="vertical"
                         android:visibility="gone"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_detail_skills"></LinearLayout>
+                        app:layout_constraintTop_toBottomOf="@id/tv_detail_skills" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -335,10 +335,11 @@
                         android:id="@+id/tv_detail_responsibilities"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="20dp"
+                        android:padding="16dp"
                         android:text="주요업무"
                         android:textAppearance="@style/subtitle1"
                         android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -378,10 +379,11 @@
                         android:id="@+id/tv_detail_qualifications"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="20dp"
+                        android:padding="16dp"
                         android:text="자격요건"
                         android:textAppearance="@style/subtitle1"
                         android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -422,10 +424,11 @@
                         android:id="@+id/tv_detail_preffered"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="20dp"
+                        android:padding="16dp"
                         android:text="우대사항"
                         android:textAppearance="@style/subtitle1"
                         android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -466,10 +469,11 @@
                         android:id="@+id/tv_detail_benefits"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="20dp"
+                        android:padding="16dp"
                         android:text="혜택 및 복지"
                         android:textAppearance="@style/subtitle1"
                         android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -508,10 +512,11 @@
                         android:id="@+id/tv_detail_etc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="20dp"
+                        android:padding="16dp"
                         android:text="채용절차 및 기타 지원 유의사항"
                         android:textAppearance="@style/subtitle1"
                         android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -717,74 +722,16 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/cl_detail_company_plus"
-                    android:layout_width="match_parent"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDetailSimilarPositions"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="22dp"
                     android:layout_marginVertical="40dp"
-                    android:paddingVertical="10dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintBottom_toTopOf="@id/cl_detail_70"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/cl_detail_position">
-
-                    <ImageView
-                        android:id="@+id/company_image_plus"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginEnd="16dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:src="@drawable/img_search_dummy" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="18dp"
-                        app:layout_constraintStart_toEndOf="@id/company_image_plus"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <TextView
-                                android:id="@+id/tv_detail_company_name_plus"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginEnd="26dp"
-                                android:text="채용 기업"
-                                android:textAppearance="@style/body2"
-                                android:textColor="@color/gray5"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:id="@+id/tv_detail_job_title_plus"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:text="채용 공고 제목"
-                                android:textAppearance="@style/body"
-                                android:textColor="@color/gray5"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/tv_detail_company_name_plus" />
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_detail_bmk_normal"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toEndOf="@id/tv_detail_job_title_plus"
-                                app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
+                    app:layout_constraintTop_toBottomOf="@id/cl_detail_position" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/cl_detail_70"
@@ -827,6 +774,8 @@
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"
             android:paddingHorizontal="30dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
