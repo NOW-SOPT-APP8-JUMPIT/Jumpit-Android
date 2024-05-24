@@ -6,7 +6,9 @@ import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.view.View
 import androidx.core.content.ContextCompat
+import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.data.remote.response.SearchResult
@@ -30,13 +32,17 @@ class SearchResultFragment :
     }
 
     private fun setupRecyclerView() {
-        searchResultAdapter = SearchResultAdapter {
-            val fragmentDetail = DetailFragment()
-            val bundle = Bundle()
-            bundle.putLong("positionId", it.id.toLong())
-            fragmentDetail.arguments = bundle
-        }
+        searchResultAdapter = SearchResultAdapter(
+            onClick = { searchResult -> navigateToDetail(searchResult.id) }
+        )
         binding.rvSearchResult.adapter = searchResultAdapter
+    }
+
+    private fun navigateToDetail(searchResult: Int) {
+        findNavController().navigate(
+            R.id.fragmentDetail,
+            bundleOf("positionId" to 5)
+        )
     }
 
     private fun setupPositionChipClickListener() {

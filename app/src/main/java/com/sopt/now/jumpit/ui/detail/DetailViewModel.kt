@@ -37,7 +37,6 @@ class DetailViewModel : ViewModel() {
                 }
             }.onFailure { throwable ->
                 _isLoading.value = false
-                Log.e("", "4")
                 _errorMessage.value = throwable.message
             }
         }

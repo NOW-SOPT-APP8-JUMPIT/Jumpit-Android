@@ -31,4 +31,9 @@
         android:label="fragment_search">
 
     </fragment>
+    <fragment
+        android:id="@+id/fragmentDetail"
+        android:name="com.sopt.now.jumpit.ui.detail.DetailFragment"
+        android:label="fragment_detail">
+    </fragment>
 </navigation>

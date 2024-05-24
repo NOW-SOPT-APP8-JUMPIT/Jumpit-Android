@@ -22,17 +22,24 @@ class DetailFragment : BindingFragment<FragmentDetailBinding>(R.layout.fragment_
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val positionId = arguments?.getLong("positionId") ?: 0L
+        val positionId = arguments?.getInt("positionId") ?: -1
 
-        viewModel.getDetailInfo(positionId)
+        viewModel.getDetailInfo(positionId.toLong())
         viewModel.detailInfo.observe(viewLifecycleOwner) {
             binding.companyImage.load(it.company.image)
-            binding.tvDetailJobTitle.text = it.position.title
             binding.tvDetailCorp.text = it.company.name
+
+            binding.tvDetailJobTitle.text = it.position.title
             binding.tvDetailCareerReq.text = it.position.career
             binding.tvDetailDeadlineReq.text = it.position.deadline
             binding.tvDetailLocationReq.text = it.position.location
             binding.tvDetailSchoolReq.text = it.position.education
+
+            binding.tvDetailResponsibilitiesReq.text = it.position.responsibilities
+            binding.tvDetailEtcReq.text = it.position.notice
+            binding.tvDetailPrefferedReq.text = it.position.preferred
+            binding.tvDetailQualificationsReq.text = it.position.qualifications
+            binding.tvDetailBenefitsReq.text = it.position.benefits
         }
     }
 }
