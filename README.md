@@ -114,5 +114,6 @@
 </br>
 
 ## 📸 안드 점핏 시연영상
-- Comming Soon
+https://github.com/NOW-SOPT-APP8-JUMPIT/Jumpit-Android/assets/127238018/7a26a467-9e53-43fc-8b79-feda887a4eba
+
 
