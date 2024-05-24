@@ -1,4 +1,5 @@
 <resources>
+
     <style name="Theme.Jumpit" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/white</item>
@@ -6,8 +7,11 @@
         <item name="colorSecondary">@color/white</item>
         <item name="colorSecondaryVariant">@color/white</item>
         <item name="colorOnSecondary">@color/black</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <item name="android:includeFontPadding">false</item>
+        <item name="android:windowBackground">@color/white</item>
     </style>
 
     <style name="BottomSheetDialogAnimation">

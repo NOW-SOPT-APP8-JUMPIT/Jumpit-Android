@@ -9,16 +9,15 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.snackbar.Snackbar
 import com.sopt.now.jumpit.R
-import com.sopt.now.jumpit.data.remote.response.SearchResult
+import com.sopt.now.jumpit.data.remote.response.SearchResultsResponse
 import com.sopt.now.jumpit.databinding.FragmentSearchResultBinding
-import com.sopt.now.jumpit.ui.base.BindingFragment
+import com.sopt.now.jumpit.ui.common.base.BindingFragment
 
 class SearchResultFragment :
     BindingFragment<FragmentSearchResultBinding>(R.layout.fragment_search_result) {
 
     private lateinit var searchResultAdapter: SearchResultAdapter
-    private val viewModel: SearchResultViewModel by activityViewModels()
-    private var bottomSheet: SearchCategoryDialog? = null
+    private val viewModel: SearchResultViewModel by activityViewModels<SearchResultViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -42,9 +41,13 @@ class SearchResultFragment :
     }
 
     private fun showBottomSheet() {
-        if (bottomSheet == null || !bottomSheet!!.isAdded) {
-            bottomSheet = SearchCategoryDialog()
-            bottomSheet!!.show(parentFragmentManager, "SearchCategoryDialog")
+        val existingDialog = childFragmentManager.findFragmentByTag("SearchCategoryDialog")
+        if (existingDialog == null) {
+            val bottomSheetDialog = SearchCategoryDialog()
+            bottomSheetDialog.show(
+                childFragmentManager,
+                "SearchCategoryDialog"
+            )
         }
     }
 
@@ -56,14 +59,14 @@ class SearchResultFragment :
         }
     }
 
-    private fun updateSearchResultCount(searchResults: List<SearchResult>) {
+    private fun updateSearchResultCount(searchResults: List<SearchResultsResponse.Position>) {
         binding.tvSearchResultCount.text = createSpannableString(
             getString(R.string.searchResultCount, searchResults.size),
             searchResults.size
         )
     }
 
-    private fun updateEmptyTextVisibility(searchResults: List<SearchResult>) {
+    private fun updateEmptyTextVisibility(searchResults: List<SearchResultsResponse.Position>) {
         when (searchResults.isEmpty()) {
             true -> binding.llSearchResultEmpty.visibility = View.VISIBLE
             false -> binding.llSearchResultEmpty.visibility = View.GONE

@@ -1,12 +1,48 @@
 <resources>
-    <string name="app_name">점핏</string>
+    <string name="appName">점핏</string>
     <string name="menuHome">홈</string>
     <string name="menuEmployment">개발자 채용</string>
     <string name="menuPassnote">합격족보</string>
     <string name="menuResume">이력서</string>
     <string name="menuApply">지원현황</string>
 
+<!--    검색 뷰-->
     <string name="searchResultCount">포지션(%d)</string>
+    <string name="searchCategory1">서버/백엔드 개발자</string>
+    <string name="searchCategory2">프론트엔드 개발자</string>
+    <string name="searchCategory3">웹 풀스택 개발자</string>
+    <string name="searchCategory4">안드로이드 개발자</string>
+    <string name="searchCategory5">iOS 개발자</string>
+    <string name="searchCategory6">크로스플랫폼 앱개발자</string>
+    <string name="searchCategory7">게임 클라이언트 개발자</string>
+    <string name="searchCategory8">게임 서버 개발자</string>
+    <string name="searchCategory9">DBA</string>
+    <string name="searchCategory10">빅데이터 엔지니어</string>
+    <string name="searchCategory11">인공지능/머신러닝</string>
+    <string name="searchCategory12">devops/시스템 엔지니어</string>
+    <string name="searchCategory13">정보보안 담당자</string>
+    <string name="searchCategory14">QA 엔지니어</string>
+    <string name="searchCategory15">개발 PM</string>
+    <string name="searchCategory16">HW/임베디드</string>
+    <string name="searchCategory17">SW/솔루션</string>
+    <string name="searchCategory18">웹퍼블리셔</string>
+    <string name="searchCategory19">VR/AR/3D</string>
+    <string name="searchCategory20">블록체인</string>
+    <string name="searchCategory21">기술지원</string>
+    <string name="searchCategoryTitle">직무</string>
+    <string name="tvSearchCategoryTitleEtc">\ \ \ \ \ \ 경력\ \ \ \ \ \ 태그\ \ \ \ \ \ 기술스택\ \ \ \ \ \ 지역</string>
+    <string name="searchRecentTitle">최근 검색어</string>
+    <string name="searchRecentDeleteAll">전체삭제</string>
+    <string name="searchResultEmpty">등록된 결과가 없어요.</string>
+    <string name="searchResultEmptyGuide">새로운 검색어로\n나에게 맞는 공고를 찾아봐요!</string>
+    <string name="searchCategoryPosition">직무</string>
+    <string name="searchCategoryCareer">경력</string>
+    <string name="searchCategoryTag">#태그</string>
+    <string name="searchCategoryStack">기술스택</string>
+    <string name="searchCategoryArea">지역</string>
+    <string name="searchHint">\'Python\'을 검색해보세요</string>
+
+<!--    홈 뷰-->
     <string name="homeSubtitle1">직무별로 보기</string>
     <string name="homeSubtitle2">테마별 모음. zip</string>
     <string name="homeSubtitle3">개발자에게 꼭 필요한 것만!</string>
@@ -49,7 +85,6 @@
     <string name="tvResumeHelpPrivateContent">모든 정보가 비공개 됩니다.\n입사지원한 기업에서만 이력서를\n확인할 수 있습니다.</string>
     <string name="tvAddResume">이력서 추가하기</string>
     <string name="tvGetResume">사람인 이력서 가져오기</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tvEditDialogHeader">편집</string>
     <string name="tvShowResume">이력서 미리보기</string>

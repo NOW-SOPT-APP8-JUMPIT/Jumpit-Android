@@ -1,4 +1,4 @@
-package com.sopt.now.jumpit.ui.base
+package com.sopt.now.jumpit.ui.common.base
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes

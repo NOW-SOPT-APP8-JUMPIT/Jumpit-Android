@@ -21,7 +21,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
-                    android:layout_marginTop="47dp"
+                    android:layout_marginTop="12dp"
                     android:src="@drawable/img_home_logo" />
 
                 <ImageView
@@ -29,7 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="220dp"
-                    android:layout_marginTop="53dp"
+                    android:layout_marginTop="18dp"
                     android:src="@drawable/ic_home_alarm" />
 
                 <ImageView
@@ -37,7 +37,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="53dp"
+                    android:layout_marginTop="18dp"
                     android:src="@drawable/ic_home_my" />
             </LinearLayout>
 
