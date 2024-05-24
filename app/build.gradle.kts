@@ -92,7 +92,6 @@ dependencies {
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
 }
-
 fun getApiKey(propertyKey: String): String {
     return gradleLocalProperties(rootDir).getProperty(propertyKey)
 }
