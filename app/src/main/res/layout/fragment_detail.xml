@@ -308,9 +308,9 @@
                         android:layout_marginEnd="22dp"
                         android:padding="20dp"
                         android:src="@drawable/ic_detail_toggledown"
-                        android:tint="@color/gray5"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/tv_detail_skills" />
+                        app:layout_constraintTop_toTopOf="@id/tv_detail_skills"
+                        app:tint="@color/gray5" />
 
                     <LinearLayout
                         android:id="@+id/ll_skills_container"
@@ -349,9 +349,9 @@
                         android:layout_marginEnd="22dp"
                         android:padding="20dp"
                         android:src="@drawable/ic_detail_toggledown"
-                        android:tint="@color/gray5"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/tv_detail_responsibilities" />
+                        app:layout_constraintTop_toTopOf="@id/tv_detail_responsibilities"
+                        app:tint="@color/gray5" />
 
                     <TextView
                         android:id="@+id/tv_detail_responsibilities_req"
@@ -392,9 +392,9 @@
                         android:layout_marginEnd="22dp"
                         android:padding="20dp"
                         android:src="@drawable/ic_detail_toggledown"
-                        android:tint="@color/gray5"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/tv_detail_qualifications" />
+                        app:layout_constraintTop_toTopOf="@id/tv_detail_qualifications"
+                        app:tint="@color/gray5" />
 
                     <TextView
                         android:id="@+id/tv_detail_qualifications_req"
@@ -436,9 +436,9 @@
                         android:layout_marginEnd="22dp"
                         android:padding="20dp"
                         android:src="@drawable/ic_detail_toggledown"
-                        android:tint="@color/gray5"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/tv_detail_preffered" />
+                        app:layout_constraintTop_toTopOf="@id/tv_detail_preffered"
+                        app:tint="@color/gray5" />
 
                     <TextView
                         android:id="@+id/tv_detail_preffered_req"
@@ -480,9 +480,9 @@
                         android:layout_marginEnd="22dp"
                         android:padding="20dp"
                         android:src="@drawable/ic_detail_toggledown"
-                        android:tint="@color/gray5"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@id/tv_detail_benefits" />
+                        app:layout_constraintTop_toTopOf="@id/tv_detail_benefits"
+                        app:tint="@color/gray5" />
 
                     <TextView
                         android:id="@+id/tv_detail_benefits_req"
@@ -732,7 +732,6 @@
                         android:id="@+id/company_image_plus"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="50dp"
                         android:layout_marginEnd="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
