@@ -9,19 +9,19 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.activityViewModels
 import coil.load
 import com.sopt.now.jumpit.R
-import com.sopt.now.jumpit.data.remote.response.DummyData
+import com.sopt.now.jumpit.data.remote.response.SimilarCompanyDummyData
 import com.sopt.now.jumpit.data.remote.response.Skill
 import com.sopt.now.jumpit.databinding.FragmentDetailBinding
 import com.sopt.now.jumpit.ui.common.base.BindingFragment
 
 class DetailFragment : BindingFragment<FragmentDetailBinding>(R.layout.fragment_detail) {
     private val viewModel by activityViewModels<DetailViewModel>()
-    private lateinit var dummyData: DummyData
+    private lateinit var similarCompanyDummyData: SimilarCompanyDummyData
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val positionId = arguments?.getInt("positionId") ?: 2
 
-        dummyData = DummyData(
+        similarCompanyDummyData = SimilarCompanyDummyData(
             imageUrl = R.drawable.img_detail_dummy,
             companyName = "엠비아이솔루션",
             jobTitle = "[프론트엔드] React 미드레벨 챗봇 개발자"
@@ -47,9 +47,9 @@ class DetailFragment : BindingFragment<FragmentDetailBinding>(R.layout.fragment_
             binding.companyImageBottom.load(it.company.image)
             binding.tvDetailCompanyNameBottom.text = it.company.name
 
-            binding.companyImagePlus.load(dummyData.imageUrl)
-            binding.tvDetailCompanyNamePlus.text = dummyData.companyName
-            binding.tvDetailJobTitlePlus.text = dummyData.jobTitle
+            binding.companyImagePlus.load(similarCompanyDummyData.imageUrl)
+            binding.tvDetailCompanyNamePlus.text = similarCompanyDummyData.companyName
+            binding.tvDetailJobTitlePlus.text = similarCompanyDummyData.jobTitle
 
 
             addSkills(it.skills)
