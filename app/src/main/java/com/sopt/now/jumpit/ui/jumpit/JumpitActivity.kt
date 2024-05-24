@@ -1,8 +1,11 @@
 package com.sopt.now.jumpit.ui.jumpit
 
+import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import android.view.WindowManager
+import androidx.core.view.WindowCompat
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
@@ -11,7 +14,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.data.model.BottomNaviItems
 import com.sopt.now.jumpit.databinding.ActivityJumpitBinding
-import com.sopt.now.jumpit.ui.base.BindingActivity
+import com.sopt.now.jumpit.ui.common.base.BindingActivity
 
 class JumpitActivity : BindingActivity<ActivityJumpitBinding>(R.layout.activity_jumpit){
     private lateinit var navController: NavController
@@ -20,6 +23,7 @@ class JumpitActivity : BindingActivity<ActivityJumpitBinding>(R.layout.activity_
         super.onCreate(savedInstanceState)
 
         setupNavHost()
+        setupTransparentActionBar()
     }
 
     private fun setupNavHost() {
@@ -54,6 +58,15 @@ class JumpitActivity : BindingActivity<ActivityJumpitBinding>(R.layout.activity_
         binding.bnvJumpit.setOnItemSelectedListener { item ->
             handleBottomNavItemClick(item)
             return@setOnItemSelectedListener true
+        }
+    }
+
+    private fun setupTransparentActionBar() {
+        window.apply {
+            setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+            )
         }
     }
 

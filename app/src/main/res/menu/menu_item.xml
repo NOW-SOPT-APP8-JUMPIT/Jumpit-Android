@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Home (홈) -->
     <item
         android:id="@+id/menuHome"
         android:icon="@drawable/selector_home_checked"
         android:title="@string/menuHome" />
 
-    <!-- Recruitment (개발자 채용) -->
     <item
         android:id="@+id/menuEmployment"
+        android:enabled="false"
         android:icon="@drawable/ic_employment_normal"
         android:title="@string/menuEmployment" />
 
-    <!-- Passnote (합격 족보) -->
     <item
         android:id="@+id/menuPassnote"
+        android:enabled="false"
         android:icon="@drawable/ic_passnote_normal"
         android:title="@string/menuPassnote" />
 
-    <!-- Resume (이력서) -->
     <item
         android:id="@+id/menuResume"
         android:icon="@drawable/selector_resume_checked"
         android:title="@string/menuResume" />
 
-    <!-- Apply status (지원 현황) -->
     <item
         android:id="@+id/menuApply"
+        android:enabled="false"
         android:icon="@drawable/ic_apply_normal"
         android:title="@string/menuApply" />
 

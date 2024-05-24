@@ -2,13 +2,15 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data></data>
+    <data>
+
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp">
 
-        <!-- FragmentContainerView for Navigation Host -->
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fcvJumpit"
             android:name="androidx.navigation.fragment.NavHostFragment"
@@ -19,11 +21,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:navGraph="@navigation/nav_graph" />
 
-        <!-- BottomNavigationView -->
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/gray1"
+            app:layout_constraintBottom_toTopOf="@id/bnvJumpit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnvJumpit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             app:itemActiveIndicatorStyle="@null"
             app:itemRippleColor="@null"
             app:labelVisibilityMode="labeled"

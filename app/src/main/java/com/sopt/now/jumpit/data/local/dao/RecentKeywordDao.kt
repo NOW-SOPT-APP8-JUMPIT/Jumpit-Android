@@ -27,6 +27,9 @@ interface RecentKeywordDao {
     @Query("DELETE FROM local_search_keyword WHERE id IN (SELECT id FROM local_search_keyword ORDER BY createdTime ASC LIMIT 1)")
     suspend fun deleteOldestSearchKeyword()
 
-    @Query("UPDATE local_search_keyword SET createdTime = :newCreatedTime WHERE id = :keywordId")
-    suspend fun updateCreatedTime(keywordId: Int, newCreatedTime: String)
+    @Query("UPDATE local_search_keyword SET createdTime = :newCreatedTime WHERE keyword = :keyword")
+    suspend fun updateKeywordCreatedTime(keyword: String, newCreatedTime: String)
+
+    @Query("SELECT EXISTS(SELECT 1 FROM local_search_keyword WHERE keyword = :keyword)")
+    suspend fun isKeywordExists(keyword: String): Boolean
 }

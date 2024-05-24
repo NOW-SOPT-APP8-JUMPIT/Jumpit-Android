@@ -1,4 +1,4 @@
-package com.sopt.now.jumpit.ui.base
+package com.sopt.now.jumpit.ui.common.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

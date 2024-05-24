@@ -11,6 +11,13 @@ class SearchKeywordRepository(private val recentKeywordDao: RecentKeywordDao) {
         recentKeywordDao.deleteSearchKeyword(recentKeyword)
 
     suspend fun insertRecentKeyword(recentKeyword: RecentKeyword) {
+        if (recentKeywordDao.isKeywordExists(recentKeyword.keyword)) {
+            recentKeywordDao.updateKeywordCreatedTime(
+                recentKeyword.keyword,
+                LocalDateTime.now().toString()
+            )
+            return
+        }
         recentKeywordDao.insertSearchKeyword(recentKeyword)
         if (recentKeywordDao.countSearchKeywords() > MAX_SEARCH_KEYWORDS) recentKeywordDao.deleteOldestSearchKeyword()
     }
@@ -20,9 +27,6 @@ class SearchKeywordRepository(private val recentKeywordDao: RecentKeywordDao) {
     suspend fun countRecentKeywords() = recentKeywordDao.countSearchKeywords()
 
     suspend fun deleteOldestRecentKeyword() = recentKeywordDao.deleteOldestSearchKeyword()
-
-    suspend fun updateCreatedTimeOfRecentKeyword(recentKeyword: RecentKeyword) =
-        recentKeywordDao.updateCreatedTime(recentKeyword.id, LocalDateTime.now().toString())
 
     companion object {
         private const val MAX_SEARCH_KEYWORDS = 5

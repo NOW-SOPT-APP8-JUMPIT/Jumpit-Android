@@ -36,6 +36,7 @@
                 android:textColor="@color/gray6"
                 app:iconifiedByDefault="false"
                 app:queryBackground="@null"
+                app:queryHint="@string/searchHint"
                 app:searchIcon="@drawable/ic_search_search" />
         </androidx.appcompat.widget.Toolbar>
 
@@ -45,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="최근 검색어"
+            android:text="@string/searchRecentTitle"
             android:textAppearance="@style/subtitle2"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +59,7 @@
             android:layout_marginEnd="6dp"
             android:paddingHorizontal="10dp"
             android:paddingVertical="4dp"
-            android:text="전체삭제"
+            android:text="@string/searchRecentDeleteAll"
             android:textAppearance="@style/body2"
             android:textColor="@color/gray4"
             app:layout_constraintBottom_toBottomOf="@id/tvSearchRecentTitle"
