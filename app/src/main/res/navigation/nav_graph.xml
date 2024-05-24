@@ -13,6 +13,9 @@
         <action
             android:id="@+id/actionHomeToResume"
             app:destination="@id/menuResume" />
+        <action
+            android:id="@+id/actionHomeToSearch"
+            app:destination="@id/fragmentSearch" />
     </fragment>
 
     <fragment
@@ -29,6 +32,5 @@
         android:id="@+id/fragmentSearch"
         android:name="com.sopt.now.jumpit.ui.search.SearchFragment"
         android:label="fragment_search">
-
     </fragment>
 </navigation>
