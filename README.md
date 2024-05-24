@@ -9,7 +9,7 @@
 |<img src="https://avatars.githubusercontent.com/u/127238018?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/91470334?v=4" width="150" />|<img src="https://avatars.githubusercontent.com/u/109855280?v=4" width="150" />|
 |:---------:|:---------:|:---------:|
 |[👑최준서](https://github.com/junseo511)|[이가을](https://github.com/gaeulzzang)|[이나경](https://github.com/nagaeng)|
-| `검색` | `홈`</br>`상세` | `이력서` |
+| `검색` | `이력서` | `홈`</br>`상세` |
 </br>
 
 ## 📁 폴더링
@@ -114,6 +114,7 @@
 </br>
 
 ## 📸 안드 점핏 시연영상
-https://github.com/NOW-SOPT-APP8-JUMPIT/Jumpit-Android/assets/127238018/7a26a467-9e53-43fc-8b79-feda887a4eba
+https://github.com/NOW-SOPT-APP8-JUMPIT/Jumpit-Android/assets/127238018/454dcdc6-269d-4a49-b37b-a5e7435095b7
+
 
 
