@@ -1,19 +1,15 @@
 package com.sopt.now.jumpit.ui.detail
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import androidx.fragment.app.Fragment
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import coil.load
 import com.sopt.now.jumpit.R
+import com.sopt.now.jumpit.data.remote.response.Skill
 import com.sopt.now.jumpit.databinding.FragmentDetailBinding
 import com.sopt.now.jumpit.ui.base.BindingFragment
 
@@ -22,7 +18,7 @@ class DetailFragment : BindingFragment<FragmentDetailBinding>(R.layout.fragment_
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val positionId = arguments?.getInt("positionId") ?: -1
+        val positionId = arguments?.getInt("positionId") ?: 3
 
         viewModel.getDetailInfo(positionId.toLong())
         viewModel.detailInfo.observe(viewLifecycleOwner) {
@@ -40,6 +36,47 @@ class DetailFragment : BindingFragment<FragmentDetailBinding>(R.layout.fragment_
             binding.tvDetailPrefferedReq.text = it.position.preferred
             binding.tvDetailQualificationsReq.text = it.position.qualifications
             binding.tvDetailBenefitsReq.text = it.position.benefits
+
+            binding.companyImageBottom.load(it.company.image)
+            binding.tvDetailCompanyNameBottom.text = it.company.name
+
+            addSkills(it.skills)
+        }
+
+        setupToggleListeners()
+    }
+
+    private fun addSkills(skills: List<Skill>) {
+        val container = binding.llSkillsContainer
+        container.removeAllViews()
+
+        for (skill in skills) {
+            val skillView = LayoutInflater.from(requireContext()).inflate(R.layout.item_skill, container, false) as ConstraintLayout
+            val skillImage = skillView.findViewById<ImageView>(R.id.skill_image)
+            val skillName = skillView.findViewById<TextView>(R.id.skill_name)
+
+            skillImage.load(skill.image)
+            skillName.text = skill.name
+
+            container.addView(skillView)
+        }
+    }
+    private fun setupToggleListeners() {
+        toggleSection(binding.icToggleSkills, binding.llSkillsContainer)
+        toggleSection(binding.icToggleResponsibilities, binding.tvDetailResponsibilitiesReq)
+        toggleSection(binding.icToggleQualifications, binding.tvDetailQualificationsReq)
+        toggleSection(binding.icTogglePreffered, binding.tvDetailPrefferedReq)
+        toggleSection(binding.icToggleBenefits, binding.tvDetailBenefitsReq)
+        toggleSection(binding.icToggleEtc, binding.tvDetailEtcReq)
+    }
+
+    private fun toggleSection(toggleButton: View, contentView: View) {
+        toggleButton.setOnClickListener {
+            contentView.visibility = if (contentView.visibility == View.GONE) {
+                View.VISIBLE
+            } else {
+                View.GONE
+            }
         }
     }
 }

@@ -290,7 +290,6 @@
                         android:id="@+id/tv_detail_skills"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
                         android:padding="20dp"
                         android:text="기술스택"
                         android:textAppearance="@style/subtitle1"
@@ -308,19 +307,19 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@id/tv_detail_skills" />
 
-                    <TextView
-                        android:id="@+id/tv_detail_skills_req"
+                    <LinearLayout
+                        android:id="@+id/ll_skills_container"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
-                        android:textAppearance="@style/body1"
-                        android:textColor="@color/gray5"
+                        android:orientation="vertical"
                         android:visibility="gone"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_detail_skills"
-                        tools:text="머시기머시기 기술스택이요" />
+                        app:layout_constraintTop_toBottomOf="@id/tv_detail_skills">
+                    </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/cl_detail_responsibilities"
@@ -333,7 +332,6 @@
                         android:id="@+id/tv_detail_responsibilities"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
                         android:padding="20dp"
                         android:text="주요업무"
                         android:textAppearance="@style/subtitle1"
@@ -342,6 +340,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
+                        android:id="@+id/ic_toggle_responsibilities"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="22dp"
@@ -358,6 +357,7 @@
                         android:layout_marginEnd="16dp"
                         android:textAppearance="@style/body1"
                         android:textColor="@color/gray5"
+                        android:visibility="gone"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_detail_responsibilities"
                         tools:text="모시기모시기 주요업무요" />
@@ -374,7 +374,6 @@
                         android:id="@+id/tv_detail_qualifications"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
                         android:padding="20dp"
                         android:text="자격요건"
                         android:textAppearance="@style/subtitle1"
@@ -383,6 +382,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
+                        android:id="@+id/ic_toggle_qualifications"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="22dp"
@@ -399,6 +399,7 @@
                         android:layout_marginEnd="16dp"
                         android:textAppearance="@style/body1"
                         android:textColor="@color/gray5"
+                        android:visibility="gone"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_detail_qualifications"
                         tools:text="모시기모시기 자격요건이요" />
@@ -415,7 +416,6 @@
                         android:id="@+id/tv_detail_preffered"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
                         android:padding="20dp"
                         android:text="우대사항"
                         android:textAppearance="@style/subtitle1"
@@ -424,6 +424,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
+                        android:id="@+id/ic_toggle_preffered"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="22dp"
@@ -440,6 +441,7 @@
                         android:layout_marginEnd="16dp"
                         android:textAppearance="@style/body1"
                         android:textColor="@color/gray5"
+                        android:visibility="gone"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_detail_preffered"
                         tools:text="우대우대우끼끼" />
@@ -456,7 +458,6 @@
                         android:id="@+id/tv_detail_benefits"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
                         android:padding="20dp"
                         android:text="혜택 및 복지"
                         android:textAppearance="@style/subtitle1"
@@ -465,6 +466,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
+                        android:id="@+id/ic_toggle_benefits"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="22dp"
@@ -480,6 +482,7 @@
                         android:layout_marginStart="16dp"
                         android:textAppearance="@style/body1"
                         android:textColor="@color/gray5"
+                        android:visibility="gone"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_detail_benefits"
                         tools:text="하 연봉 2억원" />
@@ -496,7 +499,6 @@
                         android:id="@+id/tv_detail_etc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
                         android:padding="20dp"
                         android:text="채용절차 및 기타 지원 유의사항"
                         android:textAppearance="@style/subtitle1"
@@ -505,6 +507,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
+                        android:id="@+id/ic_toggle_etc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="22dp"
@@ -520,6 +523,7 @@
                         android:layout_marginStart="16dp"
                         android:textAppearance="@style/body1"
                         android:textColor="@color/gray5"
+                        android:visibility="gone"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_detail_etc"
                         tools:text="면접 뭐시기 코테 뭐시기 알고리즘 어쩌구" />
@@ -655,12 +659,105 @@
                                     app:layout_constraintTop_toTopOf="parent" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
                         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_detail_position"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintBottom_toTopOf="@id/cl_detail_70"
+                    app:layout_constraintTop_toBottomOf="@id/cl_detail_company_info">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="지금 보는 포지션과 유사해요"
+                            android:textAppearance="@style/subtitle2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/detail_icn_notification"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_detail_company_plus"
+                    android:layout_marginVertical="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cl_detail_position"
+                    app:layout_constraintBottom_toTopOf="@id/cl_detail_70">
+
+                    <ImageView
+                        android:id="@+id/company_image_plus"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@drawable/img_search_dummy" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        app:layout_constraintStart_toEndOf="@id/company_image_plus"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_detail_company_name_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="26dp"
+                                android:text="채용 기업"
+                                android:textAppearance="@style/body2"
+                                android:textColor="@color/gray5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_detail_job_title_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="채용 공고 제목"
+                                android:textAppearance="@style/body"
+                                android:textColor="@color/gray5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_detail_company_name_plus" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/cl_detail_70"
