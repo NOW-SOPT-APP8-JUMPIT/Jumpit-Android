@@ -7,4 +7,28 @@
     <string name="menuApply">지원현황</string>
 
     <string name="searchResultCount">포지션(%d)</string>
+    <string name="homeSubtitle1">직무별로 보기</string>
+    <string name="homeSubtitle2">테마별 모음. zip</string>
+    <string name="homeSubtitle3">개발자에게 꼭 필요한 것만!</string>
+    <string name="homeFrontend">프론트엔드\n개발자</string>
+    <string name="homeServerback">서버/백엔\n드 개발자</string>
+    <string name="homeWebfullstack">웹 풀스택\n개발자</string>
+    <string name="homeSwsol">SW/\n솔루션</string>
+    <string name="homeAiml">인공지능/\n머신러닝</string>
+    <string name="homeQa">QA\n엔지니어</string>
+    <string name="homeAndroid">안드로이드\n개발자</string>
+    <string name="homeJoball">직무\n전체보기</string>
+    <string name="homeTheme1">개발자 인터뷰가\n등록된 HOT 기업</string>
+    <string name="homeTheme2">K-유니콘으로\n무럭무럭 크는 중</string>
+    <string name="homeTheme3">채용담당자가\n읽씹 안 하는 기업</string>
+    <string name="homeTheme4">내 연봉 앞자리가\n바뀌는 포지션</string>
+    <string name="homeFeedtitle">#피드</string>
+    <string name="homeFeedcontent">주목! 너만 모르는\n개발자 맞춤 꿀소식들</string>
+    <string name="homeQnatitle"><![CDATA[Q&A]]></string>
+    <string name="homeQnacontent">개발자 취업 궁금증에 \n대한 모든 답!</string>
+    <string name="homeInterviewtitle">인터뷰</string>
+    <string name="homeInterviewcontent">인터뷰를 통한 \n회사의 개발 문화 탐색</string>
+    <string name="homeContentstitle">컨텐츠</string>
+    <string name="homeContentscontent">개발자라면 놓치면 \n안 되는 혜택 4가지!</string>
+    <string name="homeSeeResume">합격자들 이력서 엿보기</string>
 </resources>

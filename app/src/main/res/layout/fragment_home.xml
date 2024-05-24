@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="17dp"
-                android:text="직무별로 보기"
+                android:text="@string/homeSubtitle1"
                 android:textAppearance="@style/subtitle1" />
 
             <GridLayout
@@ -86,7 +86,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="프론트엔드\n개발자"
+                        android:text="@string/homeFrontend"
                         android:textAppearance="@style/body" />
                 </LinearLayout>
 
@@ -109,7 +109,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="서버/백엔\n드 개발자"
+                        android:text="@string/homeServerback"
                         android:textAppearance="@style/body" />
                 </LinearLayout>
 
@@ -132,7 +132,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="웹 풀스택\n개발자"
+                        android:text="@string/homeWebfullstack"
                         android:textAppearance="@style/body" />
                 </LinearLayout>
 
@@ -155,7 +155,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="SW/\n솔루션"
+                        android:text="@string/homeSwsol"
                         android:textAppearance="@style/body" />
                 </LinearLayout>
 
@@ -178,7 +178,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="인공지능/\n머신러닝"
+                        android:text="@string/homeAiml"
                         android:textAppearance="@style/body" />
                 </LinearLayout>
 
@@ -201,7 +201,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="QA\n엔지니어"
+                        android:text="@string/homeQa"
                         android:textAppearance="@style/body" />
                 </LinearLayout>
 
@@ -224,7 +224,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="안드로이드\n개발자"
+                        android:text="@string/homeAndroid"
                         android:textAppearance="@style/body" />
                 </LinearLayout>
 
@@ -248,7 +248,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="직무\n전체보기"
+                        android:text="@string/homeJoball"
                         android:textAppearance="@style/body" />
                 </LinearLayout>
             </GridLayout>
@@ -263,7 +263,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="17dp"
-                    android:text="테마별 모음 . zip"
+                    android:text="@string/homeSubtitle2"
                     android:textAppearance="@style/subtitle1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -305,7 +305,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="개발자 인터뷰가\n등록된 HOT 기업"
+                            android:text="@string/homeTheme1"
                             android:textAppearance="@style/subtitle2"
                             android:textColor="@color/black" />
 
@@ -328,7 +328,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="K-유니콘으로\n무럭무럭 크는 중"
+                            android:text="@string/homeTheme2"
                             android:textAppearance="@style/subtitle2"
                             android:textColor="@color/black" />
 
@@ -351,7 +351,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="채용담당자가\n읽씹 안 하는 기업"
+                            android:text="@string/homeTheme3"
                             android:textAppearance="@style/subtitle2"
                             android:textColor="@color/black" />
 
@@ -374,7 +374,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="내 연봉 앞자리가\n바뀌는 포지션"
+                            android:text="@string/homeTheme4"
                             android:textAppearance="@style/subtitle2"
                             android:textColor="@color/black" />
 
@@ -399,7 +399,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="17dp"
-                android:text="개발자에게 꼭 필요한 것만! "
+                android:text="@string/homeSubtitle3"
                 android:textAppearance="@style/subtitle1" />
 
             <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -426,7 +426,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="28dp"
-                        android:text="#피드"
+                        android:text="@string/homeFeedtitle"
                         android:textAppearance="@style/subtitle2"
                         android:textColor="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
@@ -437,7 +437,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginBottom="18dp"
-                        android:text="주목! 너만 모르는\n개발자 맞춤 꿀소식들"
+                        android:text="@string/homeFeedcontent"
                         android:textAppearance="@style/body1"
                         android:textColor="@color/gray5"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -465,7 +465,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="28dp"
-                        android:text="Q&amp;A"
+                        android:text="@string/homeQnatitle"
                         android:textAppearance="@style/subtitle2"
                         android:textColor="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
@@ -476,7 +476,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginBottom="18dp"
-                        android:text="개발자 취업 궁금증에 \n대한 모든 답!"
+                        android:text="@string/homeQnacontent"
                         android:textAppearance="@style/body1"
                         android:textColor="@color/gray5"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -504,7 +504,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="28dp"
-                        android:text="인터뷰"
+                        android:text="@string/homeInterviewtitle"
                         android:textAppearance="@style/subtitle2"
                         android:textColor="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
@@ -515,7 +515,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginBottom="18dp"
-                        android:text="인터뷰를 통한 \n회사의 개발 문화 탐색"
+                        android:text="@string/homeInterviewcontent"
                         android:textAppearance="@style/body1"
                         android:textColor="@color/gray5"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -544,7 +544,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="28dp"
-                        android:text="컨텐츠"
+                        android:text="@string/homeContentstitle"
                         android:textAppearance="@style/subtitle2"
                         android:textColor="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
@@ -555,7 +555,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginBottom="18dp"
-                        android:text="개발자라면 놓치면 \n안 되는 혜택 4가지!"
+                        android:text="@string/homeContentscontent"
                         android:textAppearance="@style/body1"
                         android:textColor="@color/gray5"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -589,7 +589,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:text="합격자들 이력서 엿보기"
+                    android:text="@string/homeSeeResume"
                     android:textAppearance="@style/body1"
                     android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
