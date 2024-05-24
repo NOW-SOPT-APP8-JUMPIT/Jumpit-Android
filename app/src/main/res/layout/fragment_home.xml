@@ -18,24 +18,24 @@
                 android:id="@+id/imgLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30sp"
-                android:layout_marginTop="47sp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="47dp"
                 android:src="@drawable/img_home_logo" />
 
             <ImageView
                 android:id="@+id/icnAlarm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="220sp"
-                android:layout_marginTop="53sp"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="53dp"
                 android:src="@drawable/icn_alarm" />
 
             <ImageView
                 android:id="@+id/icnMy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10sp"
-                android:layout_marginTop="53sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="53dp"
                 android:src="@drawable/icn_my" />
         </LinearLayout>
 
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="17sp"
+            android:layout_marginTop="17dp"
             android:src="@drawable/btn_home_topbar_aos" />
 
         <TextView
@@ -292,8 +292,8 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="263sp"
-                    android:layout_height="84sp"
+                    android:layout_width="263dp"
+                    android:layout_height="84dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/shape_rounded"
                     android:backgroundTint="@color/green_light"
@@ -315,8 +315,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="263sp"
-                    android:layout_height="84sp"
+                    android:layout_width="263dp"
+                    android:layout_height="84dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/shape_rounded"
                     android:backgroundTint="@color/yellow_light2"
@@ -338,8 +338,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="263sp"
-                    android:layout_height="84sp"
+                    android:layout_width="263dp"
+                    android:layout_height="84dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/shape_rounded"
                     android:backgroundTint="#BDEFEB"
@@ -361,8 +361,8 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="263sp"
-                    android:layout_height="84sp"
+                    android:layout_width="263dp"
+                    android:layout_height="84dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/shape_rounded"
                     android:backgroundTint="#DCF0FF"
@@ -404,8 +404,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="30sp"
-            android:layout_marginEnd="30sp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
             android:columnCount="2"
             android:orientation="horizontal"
             android:rowCount="2">
@@ -442,9 +442,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <ImageView
-                    android:layout_width="45sp"
-                    android:layout_height="45sp"
-                    android:layout_marginTop="10sp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/img_home_feed"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -481,9 +481,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <ImageView
-                    android:layout_width="45sp"
-                    android:layout_height="45sp"
-                    android:layout_marginTop="10sp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/img_home_qna"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -520,9 +520,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <ImageView
-                    android:layout_width="45sp"
-                    android:layout_height="45sp"
-                    android:layout_marginTop="10sp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/img_home_interview"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -560,9 +560,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <ImageView
-                    android:layout_width="45sp"
-                    android:layout_height="45sp"
-                    android:layout_marginTop="10sp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/img_home_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -573,14 +573,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="60sp"
+            android:layout_marginTop="60dp"
             android:src="@drawable/btn_passresume" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="27sp"
+            android:layout_marginTop="27dp"
             android:src="@drawable/img_home_logo_gray" />
     </LinearLayout>
 </ScrollView>
