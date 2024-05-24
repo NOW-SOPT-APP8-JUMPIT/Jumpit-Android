@@ -94,14 +94,23 @@ class SearchFragment : BindingFragment<FragmentSearchBinding>(R.layout.fragment_
         with(binding) {
             when (fcvSearch.visibility) {
                 View.GONE -> {
+                    if (checkIsInitialState()) {
+                        parentFragmentManager.popBackStack()
+                        return
+                    }
                     fcvSearch.visibility = View.VISIBLE
                     svSearch.setQuery(searchResultViewModel.pastSearchKeyword.value, false)
                     svSearch.clearFocus()
                 }
+
                 View.VISIBLE -> parentFragmentManager.popBackStack()
                 else -> {}
             }
         }
+    }
+
+    private fun checkIsInitialState(): Boolean {
+        return searchResultViewModel.pastSearchKeyword.value.isNullOrEmpty()
     }
 
     private fun setupOnBackPressedDispatcher() {
