@@ -12,14 +12,14 @@ import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.data.remote.response.DummyData
 import com.sopt.now.jumpit.data.remote.response.Skill
 import com.sopt.now.jumpit.databinding.FragmentDetailBinding
-import com.sopt.now.jumpit.ui.base.BindingFragment
+import com.sopt.now.jumpit.ui.common.base.BindingFragment
 
 class DetailFragment : BindingFragment<FragmentDetailBinding>(R.layout.fragment_detail) {
     private val viewModel by activityViewModels<DetailViewModel>()
     private lateinit var dummyData: DummyData
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val positionId = arguments?.getInt("positionId") ?: 3
+        val positionId = arguments?.getInt("positionId") ?: -1
 
         dummyData = DummyData(
             imageUrl = R.drawable.img_detail_dummy,
