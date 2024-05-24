@@ -763,8 +763,6 @@
                     android:id="@+id/cl_detail_70"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginBottom="46dp"
                     android:background="#F2FBF8"
                     android:paddingHorizontal="22dp"
                     android:paddingVertical="38dp"
