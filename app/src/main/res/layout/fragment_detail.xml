@@ -297,7 +297,6 @@
                         android:text="기술스택"
                         android:textAppearance="@style/subtitle1"
                         android:textColor="@color/black"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -318,7 +317,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         android:visibility="gone"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tv_detail_skills" />
@@ -339,7 +338,6 @@
                         android:text="주요업무"
                         android:textAppearance="@style/subtitle1"
                         android:textColor="@color/black"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -383,7 +381,6 @@
                         android:text="자격요건"
                         android:textAppearance="@style/subtitle1"
                         android:textColor="@color/black"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -428,7 +425,6 @@
                         android:text="우대사항"
                         android:textAppearance="@style/subtitle1"
                         android:textColor="@color/black"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -473,7 +469,6 @@
                         android:text="혜택 및 복지"
                         android:textAppearance="@style/subtitle1"
                         android:textColor="@color/black"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -516,7 +511,6 @@
                         android:text="채용절차 및 기타 지원 유의사항"
                         android:textAppearance="@style/subtitle1"
                         android:textColor="@color/black"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
