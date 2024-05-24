@@ -401,12 +401,11 @@
                 android:text="@string/homeSubtitle3"
                 android:textAppearance="@style/subtitle1" />
 
-            <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <GridLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
+                android:layout_height="wrap_content"
                 android:columnCount="2"
                 android:orientation="horizontal"
                 android:rowCount="2">
