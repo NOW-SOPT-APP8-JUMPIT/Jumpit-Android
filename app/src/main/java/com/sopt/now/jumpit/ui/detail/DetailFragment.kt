@@ -9,16 +9,23 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.activityViewModels
 import coil.load
 import com.sopt.now.jumpit.R
+import com.sopt.now.jumpit.data.remote.response.DummyData
 import com.sopt.now.jumpit.data.remote.response.Skill
 import com.sopt.now.jumpit.databinding.FragmentDetailBinding
 import com.sopt.now.jumpit.ui.base.BindingFragment
 
 class DetailFragment : BindingFragment<FragmentDetailBinding>(R.layout.fragment_detail) {
     private val viewModel by activityViewModels<DetailViewModel>()
-
+    private lateinit var dummyData: DummyData
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val positionId = arguments?.getInt("positionId") ?: 3
+
+        dummyData = DummyData(
+            imageUrl = R.drawable.img_detail_dummy,
+            companyName = "엠비아이솔루션",
+            jobTitle = "[프론트엔드] React 미드레벨 챗봇 개발자"
+        )
 
         viewModel.getDetailInfo(positionId.toLong())
         viewModel.detailInfo.observe(viewLifecycleOwner) {
@@ -40,6 +47,11 @@ class DetailFragment : BindingFragment<FragmentDetailBinding>(R.layout.fragment_
             binding.companyImageBottom.load(it.company.image)
             binding.tvDetailCompanyNameBottom.text = it.company.name
 
+            binding.companyImagePlus.load(dummyData.imageUrl)
+            binding.tvDetailCompanyNamePlus.text = dummyData.companyName
+            binding.tvDetailJobTitlePlus.text = dummyData.jobTitle
+
+
             addSkills(it.skills)
         }
 
@@ -51,7 +63,8 @@ class DetailFragment : BindingFragment<FragmentDetailBinding>(R.layout.fragment_
         container.removeAllViews()
 
         for (skill in skills) {
-            val skillView = LayoutInflater.from(requireContext()).inflate(R.layout.item_skill, container, false) as ConstraintLayout
+            val skillView = LayoutInflater.from(requireContext())
+                .inflate(R.layout.item_skill, container, false) as ConstraintLayout
             val skillImage = skillView.findViewById<ImageView>(R.id.skill_image)
             val skillName = skillView.findViewById<TextView>(R.id.skill_name)
 
@@ -61,6 +74,7 @@ class DetailFragment : BindingFragment<FragmentDetailBinding>(R.layout.fragment_
             container.addView(skillView)
         }
     }
+
     private fun setupToggleListeners() {
         toggleSection(binding.icToggleSkills, binding.llSkillsContainer)
         toggleSection(binding.icToggleResponsibilities, binding.tvDetailResponsibilitiesReq)
