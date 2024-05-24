@@ -19,7 +19,7 @@ class DetailFragment : BindingFragment<FragmentDetailBinding>(R.layout.fragment_
     private lateinit var similarCompanyDummyData: SimilarCompanyDummyData
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val positionId = arguments?.getInt("positionId") ?: 2
+        val positionId = arguments?.getLong("positionId") ?: 0
 
         similarCompanyDummyData = SimilarCompanyDummyData(
             imageUrl = R.drawable.img_detail_dummy,
