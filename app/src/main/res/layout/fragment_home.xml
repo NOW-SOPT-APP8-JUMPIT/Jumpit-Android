@@ -62,8 +62,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
                 android:columnCount="4"
                 android:columnOrderPreserved="false"
                 android:rowCount="2">
@@ -72,7 +70,7 @@
                     android:id="@+id/layoutFrondend"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -95,7 +93,7 @@
                     android:id="@+id/layoutServerback"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -118,7 +116,7 @@
                     android:id="@+id/layoutWebfull"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -141,7 +139,7 @@
                     android:id="@+id/layoutSwsol"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -164,7 +162,7 @@
                     android:id="@+id/layoutAiml"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -187,7 +185,7 @@
                     android:id="@+id/layoutQa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -210,7 +208,7 @@
                     android:id="@+id/layoutAndroid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -233,7 +231,7 @@
                     android:id="@+id/layoutJaball"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -584,7 +582,8 @@
                     android:layout_marginStart="16dp"
                     android:src="@drawable/ic_home_notice"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -603,7 +602,8 @@
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/ic_home_arrow_r_gray"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -612,7 +612,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="27dp"
-                android:src="@drawable/img_home_logo_gray" />
+                android:src="@drawable/img_home_logo_gray"
+                android:layout_marginBottom="42dp"/>
         </LinearLayout>
     </ScrollView>
 </layout>
