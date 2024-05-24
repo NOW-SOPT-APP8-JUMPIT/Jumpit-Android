@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.sopt.now.jumpit.R
 import com.sopt.now.jumpit.data.remote.request.ResumePrivateRequest
 import com.sopt.now.jumpit.databinding.FragmentResumeBinding
-import com.sopt.now.jumpit.ui.base.BindingFragment
+import com.sopt.now.jumpit.ui.common.base.BindingFragment
 
 class ResumeFragment : BindingFragment<FragmentResumeBinding>(R.layout.fragment_resume) {
     private lateinit var resumeAdapter: ResumeAdapter
